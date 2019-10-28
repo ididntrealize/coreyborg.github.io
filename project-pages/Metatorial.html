@@ -1,0 +1,328 @@
+
+<div class="mainBodyContent">
+
+<div class="container">
+	
+	<div class="project-description-div">
+		<div class="col-sm-offset-3 col-sm-9">
+			<h2>Metatorial Services, inc.</h2>
+			
+			
+		</div>
+		
+			
+		
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="project-tools-div">
+					<h3>Tools used</h3>
+				</div>
+			</div>
+			<div class="col-sm-9 ">
+				<p class="project-tools-p">
+					<span class="project-tag-span">&#8226;&nbsp;HTML</span>
+					<span class="project-tag-span">&#8226;&nbsp;CSS</span>
+                    <span class="project-tag-span">&#8226;&nbsp;Javascript</span>
+					<span class="project-tag-span">&#8226;&nbsp;jQuery</span>
+					<span class="project-tag-span">&#8226;&nbsp;Bootstrap</span>
+					<span class="project-tag-span">&#8226;&nbsp;Gimp</span>
+				</p>
+					
+					
+					
+			</div>
+		</div>
+				
+			
+		
+		
+		
+		
+		<div class="row">
+			<div class="col-sm-3">
+			
+					<h3>My contribution</h3>
+			</div>
+			<div class="col-sm-9 project-supporting-text-div">
+				<div class="projectsDiv-panel">
+					
+				
+					<p>
+                            This site was made from scratch to highlight the learning systems development from a long time teacher and business owner in the field of information technology.
+                            I designed a responsive template system for the content from his old sit, utilizing fontAwesome icons and custom flex components.
+                            This system takes advantage of AJAX technologies, reducing the amount of code to be loaded when you switch pages.
+                            Additionally, I filmed and editted an intro video for new visitors who don't know Bob.
+					</p>
+					
+					
+					<a class="btn btn-success btn-lg" target="_blank" href="http://www.metatorial.com/" role="button">Visit Site &raquo;</a>
+		  
+					
+				<img class="project-responsive-img img-responsive center-block" src="images/responsiveFullPreview-metatorial.png"/>
+
+					
+				</div>	
+			</div>
+			
+		</div>
+		
+		
+		
+		<hr/>
+		
+
+		<div class="row">
+
+			<div class="col-sm-3">		
+				
+				<h3>Highlighted design elements</h3>
+			</div>
+			<div class="col-sm-9 project-supporting-text-div">
+				
+				<div class="projectsDiv-panel">
+				
+				
+					
+					<!--div class="row">
+						<div class="col-xs-12">
+							
+						<h4>Responsive logos</h4>
+						
+						<img class="img-responsive project-design-img" src="http://metatorial.com/images/logo-sm-metatorial-blocks.jpg" style="max-width:100px;margin-top:0px;margin-bottom:0px;margin-right:35px;"/>
+						<img class="img-responsive project-design-img" src="http://metatorial.com/images/logo-metatorial-blocks.jpg" style="max-width:100px;margin-top:0px;margin-bottom:0px;margin-right:35px;"/>
+						
+							<p>
+                                    I came up with the idea to spell out my client's company name with building blocks, to instantly associate his site with learning.
+                                    Then, I organized a photo shoot with a talented photographer/graphic design that I know, who also colorized and cropped them out, 
+                                    allowing for multiple iterations of his logo, optimized for different viewport sizes.
+                                    
+							<p>
+                        </div>
+                        
+					<hr/>
+				
+					</div-->
+					
+				
+					
+					<h4>Main Flow-chart Background Image</h4>
+					<p>
+                        I designed a background for my client's site by taking a flow chart that he used to teach his students with,
+                        and coloring the different cells with the colors in his logo. Together, the images create a relational effect.
+                    </p>
+					<img class="img-responsive project-design-img" src="http://metatorial.com/images/banner-tagcloud-diagram-no-bob.jpg"/>
+					
+				</div>
+			</div>
+		</div>
+		
+		<hr/>
+	
+	
+		<div class="row">
+			<div class="col-sm-3">
+			
+					<h3>Highlighted Code</h3>
+			</div>
+			<div class="col-sm-9 project-supporting-text-div">
+				<div class="projectsDiv-panel" style="display:inherit;">
+					<h4>Query string redirect code</h4>
+					
+					
+						
+				</div>
+					<div class="projectsDiv-panel">
+					
+						<p>
+                             I created a javascript system which reads query string parameters, and uses AJAX to display them in the site's main page wrapper, and
+                              the url of the new page is subsequently updated. The system automatically creates new pages, given an iframe url, which is inserted into a template, 
+                             and displayed in the page wrapper.
+						</p>
+						
+					</div>
+								
+<pre><code class="js">
+
+$(document).ready(function(){
+
+    //variable needed in order to listen for query string variables
+        var startURL = window.location.href;
+        var exceptedQueryVars = ["pageName"];
+            
+
+function queryStringRedirect(){	
+
+    //check if query string is present
+    if(startURL.indexOf("?") > -1){
+            
+            var	currURL = startURL;
+                queryString = currURL.split("?"),
+                queryStringSepVals = queryString[1].split("&");
+                
+            
+                    
+                for(i = 0; i &lt; queryStringSepVals.length; i++){
+                    
+                    var currQueryKeyValPair = queryStringSepVals[i].split("="),
+                        currQueryKey,
+                        currQueryVal;
+                
+                //check if queryString[1] exists	
+                        if(currQueryKeyValPair[0] && currQueryKeyValPair[1]){
+                            currQueryKey = currQueryKeyValPair[0];
+                            currQueryVal = currQueryKeyValPair[1];
+                            
+                        }else{
+                            //set currQueryVal to a blank str
+                            currQueryVal = startURL + "?pageName" + "=" + "home";
+                            break;
+                        }
+                        
+                
+                //check if pageName var was included in query string
+                    if(Object.values(exceptedQueryVars).indexOf(currQueryKey) > -1){
+                        
+                        loadPageInfo(currQueryVal);
+                    
+                        
+                    }else{
+                        //set query string to ?pageName=home
+                       
+                        if(window.history.pushState){
+                            window.history.pushState("", "Home - Metatorial Serivices, inc.", startURL + "?pageName" + "=" + "home");
+                        }else{
+                            document.location.href = startURL + "?pageName" + "=" + "home";
+                        }
+                    }
+                    
+                }
+            
+        }else{
+            //page does not have a query string 
+            //set page to home
+                
+                if(window.history.pushState){
+                    //edit url without reload if option available, else reload
+                    window.history.pushState("", "Home - Metatorial Serivices, inc.", startURL + "?pageName" + "=" + "home");
+                }else{
+                    document.location.href = startURL + "?pageName" + "=" + "home";
+                }
+        }
+    }	
+    	
+function loadPageInfo(pageTitle){
+    //default case template var overwrites
+        var caseId = -1;
+        var pageId = pageInfoJson.iframeTemplate.pageId,
+            pagePath = pageInfoJson.iframeTemplate.pagePath,
+            pageType = pageInfoJson.iframeTemplate.pageType,
+            leadHTML = pageInfoJson.iframeTemplate.leadHTML,
+            iframeURL = pageInfoJson.iframeTemplate.iframeURL,
+            targetLocation = pageInfoJson.iframeTemplate.targetLocation,
+            
+            iframeHTML = 
+                '&lt;div class="html-content-page iframe-template">' +
+                '&lt;p>Default template html remains, ooh no, did it not change in the big switch statement? Please let the site owner know there is a problem!&lt;/p>' +
+                '&lt;/div>'
+            ;	
+    //handle full page content cases first
+    switch(pageTitle){
+        case "home":
+            //console.log("queryString read - home");
+                caseID	 = 0;
+                pageId   = pageInfoJson.home.pageId;
+                pagePath = pageInfoJson.home.pagePath;
+                pageType = pageInfoJson.home.pageType;
+                leadHTML = pageInfoJson.home.leadHTML;
+                
+        break;
+
+        //etc. 
+        //(removed other cases, to demonstrate code for coreyb.org, 
+        //however you can follow  this template for any other pages you want.
+    }	
+            
+        if(pageType == "iframeTemplate"){
+            //default case - iframe load in
+            
+            //console.log("pageId inside iframeTemplate post switch conditional: " + pageId);
+            for(i = 0; i &lt;= countJsonKeys(templateInfoJson); i++){
+                if(pageInfoJson.iframeTemplate.pageId == templateInfoJson[templateInfoJsonIndex[i]].pageId){
+                    
+                    //set local pageId from templateInfoJson
+                        pageId = templateInfoJson[templateInfoJsonIndex[i]].pageId;
+                    //set local leadHTML from templateInfoJson
+                        leadHTML = templateInfoJson[templateInfoJsonIndex[i]].leadHTML;
+                    //set local IframeURL from templateInfoJson
+                        iframeURL = templateInfoJson[templateInfoJsonIndex[i]].iframeURL;
+                    //set local targetLocation from templateInfoJson
+                        targetLocation = templateInfoJson[templateInfoJsonIndex[i]].targetLocation;
+                }
+            }
+            
+                    console.log("iframe url = " + iframeURL + "\ntarget location = " + targetLocation);
+            
+            function buildIframeTemplate(){
+                /*add class with iframe page custom class on container inside template html
+                    var htmlContentPageCustomClass = templateInfoJson[templateInfoJsonIndex[pageId - countJsonKeys(pageInfoJson)]];
+                        alert(htmlContentPageCustomClass);
+                    */	
+                    iframeHTML = 
+                        '&lt;div class="' + 'customClassWillGoHere' + ' iframe-template">' +
+                        '&lt;iframe id="template_iframe"  ' +
+                        'scrolling="no" src="' + iframeURL + '" '
+                        
+                    ;
+                    targetLocation = pageInfoJson.iframeTemplate.targetLocation;
+                    
+                    if(targetLocation !== "#side-content .video-load-container"){
+                        $("#main-content .lead").html(leadHTML);
+                        iframeHTML +=
+                            
+                            
+                            'style="width:100%; height:800px;" ' +
+                            ' allowfullscreen/>&lt;/div>' ;
+                    }else{
+                        //youtube video case
+                        iframeHTML +=
+                            'frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ' +
+                            'style="height:200px; " ' +
+                            ' allowfullscreen/>&lt;/div>' ;
+                    }
+                    
+                    $(targetLocation).html(iframeHTML);
+                //console.log($("#main-content .page-load-container").html());
+                    
+                            
+                
+            }
+            buildIframeTemplate();
+            
+        }else if(pageType == "fullPageContent"){
+            //full content of page available
+            //console.log("pagetype is fullPageContent - full content available switch");
+            
+            //insert data from json case onto master page
+            $("#main-content .lead").html(leadHTML);
+            $("#main-content .page-load-container").load(pagePath);
+            
+            
+        }
+    }
+                          
+    
+   
+
+    queryStringRedirect();
+
+})();
+</code></pre>
+
+
+				</div>
+			</div>		
+
+		</div>
+	</div>
+	
+</div>

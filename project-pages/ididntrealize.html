@@ -1,0 +1,196 @@
+<link href="css/prism.css" rel="stylesheet" />
+<div class="mainBodyContent">
+
+<div class="container">
+	
+	<div class="project-description-div">
+		<div class="col-sm-offset-3 col-sm-9">
+			<h2>Didn’t Realize</h2>
+			
+			
+		</div>
+		
+			
+		
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="project-tools-div">
+					<h3>Tools used</h3>
+				</div>
+			</div>
+			<div class="col-sm-9 ">
+				<p class="project-tools-p">
+					<span class="project-tag-span">&#8226;&nbsp;HTML</span>
+					<span class="project-tag-span">&#8226;&nbsp;CSS</span>
+					<span class="project-tag-span">&#8226;&nbsp;Javascript</span>
+					<span class="project-tag-span">&#8226;&nbsp;jQuery</span>
+					<span class="project-tag-span">&#8226;&nbsp;Bootstrap</span>
+					<span class="project-tag-span">&#8226;&nbsp;Illustrator</span>
+					<span class="project-tag-span">&#8226;&nbsp;Gimp</span>
+				</p>
+					
+					
+					
+			</div>
+		</div>
+				
+			
+		
+		
+		
+		
+		<div class="row">
+			<div class="col-sm-3">
+			
+					<h3>My contribution</h3>
+			</div>
+			<div class="col-sm-9 project-supporting-text-div">
+				<div class="projectsDiv-panel">
+					
+				
+					<p>I designed this site from scratch with HTML, CSS and Javascript. The content is composed of original poems, short stories, and music. 
+					As well as demonstrating my web skills, this site demonstrates my knack for creativity. 
+					I am not only a designer/developer; I am an artist. 
+					The inspiration of my poetry comes from events in my life that the poems relate directly back to. 
+					My short story writing is abstract, and often based off of dreams. 
+					</p>
+					<!--
+					One of my works was even <a target="_blacnk" href="http://hippyraver.com/and-then-it-had-been-raining-by-corey-boiko/">published</a>. 
+					-->
+					
+					<p>My vision for this site is a place to accumulate my non-commercial works. 
+					Currently I am hosting poems, short stories, and music. 
+					
+					</p>
+					
+					<a class="btn btn-success btn-lg" target="_blank" href="http://www.didntrealize.com/" role="button">Visit Site &raquo;</a>
+		  
+					
+				<img alt="didntrealize.com responsive site preview - across device sizes" class="project-responsive-img img-responsive center-block" src="images/responsiveFullPreview-idr.png"/>
+
+					
+				</div>	
+			</div>
+			
+		</div>
+		
+		
+		
+		<hr/>
+		
+
+		<div class="row">
+
+			<div class="col-sm-3">		
+				
+				<h3>Highlighted design elements</h3>
+			</div>
+			<div class="col-sm-9 project-supporting-text-div">
+				
+				<div class="projectsDiv-panel">
+				
+				
+					
+					<div class="row">
+						<div class="col-xs-12">
+							
+						<h4>Site logo</h4>
+						
+						<img alt="Coreyborg designed didntrealize.com Site logo" class="img-responsive project-design-img pull-left" src="http://didntrealize.com/images/logo-sm.png" style="max-width:100px;margin-top:0px;margin-bottom:0px;margin-right:35px;"/>
+						
+							<p>
+							I made this logo using free-hand illustration and Adobe Illustrator. 
+							The logo is both a '?' and an 'i' which represents the act of questioning if you exist. 
+							Whenever somebody sees my site, my first response is to ask 'who, me?'.
+							I made this site to leave a semi-permanent record of myself through art.
+							
+							<p>
+						</div>
+					</div>
+					
+					<hr/>
+				
+				
+					
+					<h4>Footer Image</h4>
+					<p>
+					I drew this free hand first, then rasterized it in photoshop and add some color filters. 
+					The philosophical theme of the website is continued with a balance between perception and reality.
+					</p>
+					<img alt="Coreyborg designed didntrealize.com custom footer design" class="img-responsive project-design-img" src="http://www.didntrealize.com/images/footer.png"/>
+					
+				</div>
+			</div>
+		</div>
+		
+		<hr/>
+	
+	
+		<div class="row">
+			<div class="col-sm-3">
+			
+					<h3>Highlighted Code</h3>
+			</div>
+			<div class="col-sm-9 project-supporting-text-div">
+				<div class="projectsDiv-panel" style="display:inherit;">
+					<h4>Entrance gate Javascript</h4>
+					
+					
+						
+				</div>
+					<div class="projectsDiv-panel">
+					
+						<p>
+						This piece of Javascript code is useful to deter bots from accessing your page.
+						Any clicks on an 'enter site' button prior to 3 seconds will not enter the site,
+						and after 22 seconds, the site will open automatically.
+						</p>
+						<p>
+						This code is useful to me, because I don't want to allow users to skim through
+						my poems, so if they have read the first poem and had some time to think about it,
+						I do not want them to read the more intense poems without context.
+						</p>
+						
+					</div>
+								
+<pre><code class="language-javascript">(function(){
+var hasty = true;
+				
+//all good things come to those that wait
+	setTimeout(function() {
+		hasty = false;
+		setTimeout(function() {
+			entranceGate();
+		}, 19000);
+	}, 3000);
+	function entranceGate(){
+	
+		var whereToNext;
+		var theFilePath = "",
+			whatDocIsNowCalled = "index",
+			andItHasThisExtension = ".html",
+			soTheLinkIs = theFilePath + whatDocIsNowCalled + andItHasThisExtension;
+		
+		if(!hasty){
+			theFilePath = "norobots/";
+			whatDocIsNowCalled = "indextorslab";
+			soTheLinkIs = theFilePath + whatDocIsNowCalled + andItHasThisExtension;
+		
+		var whereToNext = soTheLinkIs;
+			
+			window.location = whereToNext;
+		}
+	}
+})();
+</code></pre>
+
+
+				</div>
+			</div>		
+
+		</div>
+	</div>
+	
+</div>
+
+<script src="scripts/prism.js"></script>
