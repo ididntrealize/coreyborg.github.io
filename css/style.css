@@ -172,10 +172,11 @@ pre{
 	@media (max-width:978px){
 		#navbar-heading{
 			font-size:48px;
+			margin-top: 20px;
 		}
 		.navbar #brand-div img{
-			height:65px; 
-			margin-top: 20px;
+			padding-top: 5px;
+			max-height: 65px;
 			
 		}
 		.navbar.shrink #brand-div img{
@@ -198,7 +199,7 @@ pre{
 		}
         @media (max-width:978px){
             h1{
-                font-size:40px;
+                font-size:34px;
 
             }
         }
@@ -237,6 +238,12 @@ pre{
 	top:130px;
 	right:0px;
 	z-index:10000;
+}
+
+/* footer socials */
+.bottom-socials{
+	display: flex;
+	justify-content: center;
 }
 
 
@@ -342,7 +349,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f3f4', end
 	
 @media (max-width:750px){
 	#offerDiv {
-		background-position:center -135px;
+		background-position:center;
 	}
 	#offerDiv p{
 		font-size:18px;
@@ -363,8 +370,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f3f4', end
 }
 @media (max-width:750px){
 	#main-text-offer-div{
-        margin-top:40px;
-    }   
+        margin-top:0px;
+		}   
+		#offer-text{
+			padding-bottom: 50px;
+		}
 }
 .check-mark-text {
     font-size: 20px;
