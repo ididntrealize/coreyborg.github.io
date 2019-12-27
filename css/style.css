@@ -233,7 +233,7 @@ pre{
 
 
 /* social buttons */
-#socialButtonsDiv{
+#thankYouAdBlockersDiv{
 	position:fixed;
 	top:130px;
 	right:0px;
@@ -292,7 +292,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f3f4', end
 	padding:0px !important;
 	margin-bottom:0px;
 }
-.socialButton{
+.thankYouAdBlocker{
 	margin:5px;
 	display:block;
 }
