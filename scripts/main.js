@@ -6,8 +6,6 @@
 			$("#navbar ul").addClass("pull-right");
 		}
 	
-	
-	
 	/* initiate home page
 		$("#mainBodyContainer").load("page-content/porfolio.html");
 	 */
@@ -39,10 +37,6 @@
 	  }
 	});
 	
-	
-	
-	
-	
 	//realign thumbs on xs 
 		var containerWidth= $(".container").width();
 		if (containerWidth<=750){
@@ -50,8 +44,5 @@
 			$(".site-thumb").addClass("center-block");
 			$(".skill-icon").addClass("center-block");
 		}
-	
-	
-	
 	
 	})();

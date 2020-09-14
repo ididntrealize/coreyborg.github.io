@@ -1,39 +1,65 @@
 /* Page load function */
-		function changePage(event){
-			event.preventDefault();
-			
-			//console.log($(this).attr("href"));
-			
-				var linkLocation = $(this).attr("href");
-				var scrollToLocation = "#mainBodyContainer";
-				var navBarHeight = 62;
-		
-			$("#mainBodyContainer").load(linkLocation, function(){
-			
-			
-				setTimeout(function(){
-					/*check if scroll necessary */
-						if(linkLocation.includes("#")){
-							scrollToLocation = "#" + linkLocation.split("#")[1];
-						}
-					
-					$('html, body').animate({
-						scrollTop: $(scrollToLocation).offset().top - navBarHeight
-					}, 1000);
-				}, 400);
-						
-			});
-			
-			//if dropdown toggle is visible, hide menu on click
-			    if($('.navbar-toggle').css('display') !='none'){
-					$('.navbar-collapse').collapse('hide');
-					
-				}
+function switchPage(event) {
+    event.preventDefault();
 
-			var fileName = linkLocation.split("/")[1],
-				 pageName = fileName.split(".")[0],
-				 pageNameCapitilized = pageName.charAt(0).toUpperCase() + pageName.slice(1);
+    var linkLocation = $(this).attr("href");
+    changeToPage(linkLocation);
 
-			$("title").html(pageNameCapitilized + " - CoreyBorg Web Development");
-				
-		}
+    //if dropdown toggle is visible, hide menu on click
+    if ($('.navbar-toggle').css('display') != 'none') {
+        $('.navbar-collapse').collapse('hide');
+
+    }
+
+}
+
+function changeToPage(pageName) {
+
+    
+    console.log('change to page: ', pageName)
+
+    var pageExtension = "page/" + pageName;
+    var scrollToLocation = "#mainBodyContainer";
+    var navBarHeight = 62;
+
+    $("#mainBodyContainer").load(pageExtension, function () {
+
+        //update query string
+        if ('URLSearchParams' in window) {
+            var searchParams = new URLSearchParams(window.location.search);
+            searchParams.set("page", pageName);
+            //window.location.search = searchParams.toString();\
+            var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + searchParams.toString();
+            window.history.pushState({path: newurl}, '', newurl);
+        }
+
+        setTimeout(function () {
+            /*check if scroll necessary */
+            if (pageName.includes("#")) {
+                scrollToLocation = "#" + pageName.split("#")[1];
+            }
+
+            $('html, body').animate({
+                scrollTop: $(scrollToLocation).offset().top - navBarHeight
+            }, 1000);
+        }, 400);
+
+    });
+
+    var pageTitle = pageName.split(".")[0],
+        pageTitleCapitilized = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1);
+
+    $("title").html(pageTitleCapitilized + " - CoreyBorg Web Development");
+
+}
+
+//on page load set page from query string
+$( document ).ready(function() {
+    var searchParams = new URLSearchParams(window.location.search);
+    if( searchParams.get("page") ) {
+        changeToPage( searchParams.get("page") )
+    }
+
+
+    
+});
