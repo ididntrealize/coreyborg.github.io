@@ -1,196 +1,294 @@
 <link href="css/prism.css" rel="stylesheet" />
 <div class="mainBodyContent">
 
-<div class="container">
-	
-	<div class="project-description-div">
-		<div class="col-sm-offset-3 col-sm-9">
-			<h2>Didn’t Realize</h2>
-			
-			
-		</div>
-		
-			
-		
-		<div class="row">
-			<div class="col-sm-3">
-				<div class="project-tools-div">
-					<h3>Tools used</h3>
-				</div>
-			</div>
-			<div class="col-sm-9 ">
-				<p class="project-tools-p">
-					<span class="project-tag-span">&#8226;&nbsp;HTML</span>
-					<span class="project-tag-span">&#8226;&nbsp;CSS</span>
-					<span class="project-tag-span">&#8226;&nbsp;Javascript</span>
-					<span class="project-tag-span">&#8226;&nbsp;jQuery</span>
-					<span class="project-tag-span">&#8226;&nbsp;Bootstrap</span>
-					<span class="project-tag-span">&#8226;&nbsp;Illustrator</span>
-					<span class="project-tag-span">&#8226;&nbsp;Gimp</span>
-				</p>
-					
-					
-					
-			</div>
-		</div>
-				
-			
-		
-		
-		
-		
-		<div class="row">
-			<div class="col-sm-3">
-			
-					<h3>My contribution</h3>
-			</div>
-			<div class="col-sm-9 project-supporting-text-div">
-				<div class="projectsDiv-panel">
-					
-				
-					<p>I designed this site from scratch with HTML, CSS and Javascript. The content is composed of original poems, short stories, and music. 
-					As well as demonstrating my web skills, this site demonstrates my knack for creativity. 
-					I am not only a designer/developer; I am an artist. 
-					The inspiration of my poetry comes from events in my life that the poems relate directly back to. 
-					My short story writing is abstract, and often based off of dreams. 
-					</p>
-					<!--
-					One of my works was even <a target="_blacnk" href="http://hippyraver.com/and-then-it-had-been-raining-by-corey-boiko/">published</a>. 
-					-->
-					
-					<p>My vision for this site is a place to accumulate my non-commercial works. 
-					Currently I am hosting poems, short stories, and music. 
-					
-					</p>
-					
-					<a class="btn btn-success btn-lg" target="_blank" href="http://www.didntrealize.com/" role="button">Visit Site &raquo;</a>
-		  
-					
-				<img alt="didntrealize.com responsive site preview - across device sizes" class="project-responsive-img img-responsive center-block" src="images/responsiveFullPreview-idr.png"/>
+    <div class="container">
 
-					
-				</div>	
-			</div>
-			
-		</div>
-		
-		
-		
-		<hr/>
-		
+        <div class="project-description-div">
+            <div class="col-sm-offset-3 col-sm-9">
+                <h2>Didn’t Realize</h2>
 
-		<div class="row">
 
-			<div class="col-sm-3">		
-				
-				<h3>Highlighted design elements</h3>
-			</div>
-			<div class="col-sm-9 project-supporting-text-div">
-				
-				<div class="projectsDiv-panel">
-				
-				
-					
-					<div class="row">
-						<div class="col-xs-12">
-							
-						<h4>Site logo</h4>
-						
-						<img alt="Coreyborg designed didntrealize.com Site logo" class="img-responsive project-design-img pull-left" src="http://didntrealize.com/images/logo-sm.png" style="max-width:100px;margin-top:0px;margin-bottom:0px;margin-right:35px;"/>
-						
-							<p>
-							I made this logo using free-hand illustration and Adobe Illustrator. 
-							The logo is both a '?' and an 'i' which represents the act of questioning if you exist. 
-							Whenever somebody sees my site, my first response is to ask 'who, me?'.
-							I made this site to leave a semi-permanent record of myself through art.
-							
-							<p>
-						</div>
-					</div>
-					
-					<hr/>
-				
-				
-					
-					<h4>Footer Image</h4>
-					<p>
-					I drew this free hand first, then rasterized it in photoshop and add some color filters. 
-					The philosophical theme of the website is continued with a balance between perception and reality.
-					</p>
-					<img alt="Coreyborg designed didntrealize.com custom footer design" class="img-responsive project-design-img" src="http://www.didntrealize.com/images/footer.png"/>
-					
-				</div>
-			</div>
-		</div>
-		
-		<hr/>
-	
-	
-		<div class="row">
-			<div class="col-sm-3">
-			
-					<h3>Highlighted Code</h3>
-			</div>
-			<div class="col-sm-9 project-supporting-text-div">
-				<div class="projectsDiv-panel" style="display:inherit;">
-					<h4>Entrance gate Javascript</h4>
-					
-					
-						
-				</div>
-					<div class="projectsDiv-panel">
-					
-						<p>
-						This piece of Javascript code is useful to deter bots from accessing your page.
-						Any clicks on an 'enter site' button prior to 3 seconds will not enter the site,
-						and after 22 seconds, the site will open automatically.
-						</p>
-						<p>
-						This code is useful to me, because I don't want to allow users to skim through
-						my poems, so if they have read the first poem and had some time to think about it,
-						I do not want them to read the more intense poems without context.
-						</p>
-						
-					</div>
-								
-<pre><code class="language-javascript">(function(){
-var hasty = true;
-				
-//all good things come to those that wait
-	setTimeout(function() {
-		hasty = false;
-		setTimeout(function() {
-			entranceGate();
-		}, 19000);
-	}, 3000);
-	function entranceGate(){
-	
-		var whereToNext;
-		var theFilePath = "",
-			whatDocIsNowCalled = "index",
-			andItHasThisExtension = ".html",
-			soTheLinkIs = theFilePath + whatDocIsNowCalled + andItHasThisExtension;
-		
-		if(!hasty){
-			theFilePath = "norobots/";
-			whatDocIsNowCalled = "indextorslab";
-			soTheLinkIs = theFilePath + whatDocIsNowCalled + andItHasThisExtension;
-		
-		var whereToNext = soTheLinkIs;
-			
-			window.location = whereToNext;
-		}
-	}
-})();
+            </div>
+            <div class="col-sm-offset-1 col-sm-11">
+                <img alt="didntrealize.com responsive site preview - across device sizes"
+                    class="project-responsive-img img-responsive center-block"
+                    src="images/responsiveFullPreview-idr.png" />
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="project-tools-div">
+                        <h3>Tools used</h3>
+                    </div>
+                </div>
+                <div class="col-sm-9 ">
+                    <p class="project-tools-p">
+                        <span class="project-tag-span">&#8226;&nbsp;Javascript</span>
+                        <span class="project-tag-span">&#8226;&nbsp;Vue.js</span>
+                        <span class="project-tag-span">&#8226;&nbsp;Firebase.js</span>
+                        <span class="project-tag-span">&#8226;&nbsp;Cloud&nbsp;Database</span>
+                        <span class="project-tag-span">&#8226;&nbsp;Cloud&nbsp;Functions</span>
+                        <span class="project-tag-span">&#8226;&nbsp;Unit&nbsp;Tests</span>
+                        <span class="project-tag-span">&#8226;&nbsp;Typescript</span>
+                        <span class="project-tag-span">&#8226;&nbsp;SCSS</span>
+                        <span class="project-tag-span">&#8226;&nbsp;Github</span>
+                    </p>
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="row">
+                <div class="col-sm-3">
+
+                    <h3>My contribution</h3>
+                </div>
+                <div class="col-sm-9 project-supporting-text-div">
+                    <div class="projectsDiv-panel">
+
+
+                        <p>When I first registered ididntrealize.com , I didn’t have any web skills. That made me laugh,
+                            because it meant I really did not realize! Years later, I would use it to display 1 of 4
+                            random projects that I was working on, which was different for every person who saw it.
+                            However, people didn’t seem to have much interest in it, and usually would not discover how
+                            clever I was. That would not do.
+
+                        </p>
+                        <p>
+                            Next, I came up with the idea to allow anybody to post their own projects, and have a random
+                            chance to display on the home page. I realized that to get people to care about my site, I
+                            would have to make my site be about them too!
+                        </p>
+
+                        <a class="btn btn-success btn-lg" target="_blank" href="http://www.didntrealize.com/"
+                            role="button">Visit Site &raquo;</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <hr />
+
+
+            <div class="row">
+
+                <div class="col-sm-3">
+
+                    <h3>Highlighted design element</h3>
+                </div>
+                <div class="col-sm-9 project-supporting-text-div">
+
+                    <div class="projectsDiv-panel">
+
+
+
+                        <div class="row">
+                            <div class="col-xs-12">
+
+                                <img alt="Coreyborg designed didntrealize.com Site logo"
+                                    class="img-responsive project-design-img pull-left"
+                                    src="http://didntrealize.com/images/logo-sm.png"
+                                    style="max-width:100px;margin-top:0px;margin-bottom:0px;margin-right:35px;" />
+
+                                <div>
+
+                                    <h4 class="text-left" style="padding-top:0;">Site logo</h4>
+
+                                    <p>
+                                        I made this logo using free-hand illustration and Adobe Illustrator. The logo is
+                                        both a '?' and an 'i' which represents the act of questioning if you exist. Or
+                                        rather, if I do.
+
+                                        <p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+
+
+            <div class="row">
+                <div class="col-sm-3">
+
+                    <h3>Highlighted Code</h3>
+                </div>
+                <div class="col-sm-9 project-supporting-text-div">
+                    <div class="projectsDiv-panel" style="display:inherit;">
+                        <h4>Infinite Scroll from cloud database</h4>
+                    </div>
+                    <div class="projectsDiv-panel">
+                        <p>
+                            This JS method fires when a user hits the bottom of the page, triggering a query to my cloud
+                            db for the subsequent 10 user generated project documents. Any projects that are returned
+                            are randomized, added to the component’s state, then my vue template displays the new
+                            templates below the existing ones.
+                        </p>
+                    </div>
+
+                    <pre><code class="language-javascript">methods: {
+    async reachedBottom() {
+        if (this.loadMoreProjects && this.lastDocFetched) {
+            this.projectsQuery = this.projectsQuery
+                .limit(10)
+                .startAfter(this.lastDocFetched);
+
+            let newProjects = await this.projectsQuery
+                .get()
+                .then(querySnapshot => {
+                    this.lastDocFetched =
+                        querySnapshot.docs[querySnapshot.docs.length - 1];
+                    //console.log(querySnapshot.docs.map(obj => obj.id));
+                    let projectData = querySnapshot.docs.map(doc =>
+                        doc.data()
+                    );
+                    //map the doc id into this.projects
+                    let documentIds = querySnapshot.docs.map(doc => doc.id);
+                    for (let [i, project] of projectData.entries()) {
+                        project.Id = documentIds[i];
+                    }
+
+                    return projectData;
+                })
+                .catch(e => {
+                    console.log("error fetching new project: ", e);                   
+                });
+            let verifiedProjects = this.shuffle(
+                this.verifiedProjects(newProjects)
+            );
+
+            this.projects = this.projects.concat(verifiedProjects);
+            this.totalProjectRequests += newProjects.length;
+
+            db.collection("metadata")
+                .doc("globals")
+                .get()
+                .then(querySnapshot => {
+                    const data = querySnapshot.data();
+
+                    this.loadMoreProjects =
+                        this.totalProjectRequests < data.projectCount - 1;
+                })
+                .catch(e => {
+                    console.log("error fetching metadata: ", e);                   
+                });
+        } else {
+            //no more projects
+            if (this.loadMoreProjects) {
+                this.loadMoreProjects = false;
+            }
+        }
+    }
+}
+ 
 </code></pre>
 
 
-				</div>
-			</div>		
+                </div>
+                <div class="col-sm-offset-3 col-sm-9 project-supporting-text-div">
+                    <div class="projectsDiv-panel" style="display:inherit;">
+                        <h4>Cloud function to standardize user data</h4>
+                    </div>
+                    <div class="projectsDiv-panel">
+                        <p>
+                            This piece of code is triggered every time that a user creates a new project - their user
+                            information is then transferred into the newly created project object for ease of retrieval.
+                        </p>
 
-		</div>
-	</div>
-	
+                    </div>
+
+                    <pre><code class="language-javascript">//migrate information about the user from their user document
+//retrieve user document, set User information into project
+try {
+    await db
+        .collection("users")
+        .doc(newProjectObj.UserId)
+        .get()
+        .then((userSnapshot) => {
+            const userData: any = userSnapshot.data();
+
+            const newProjectFields = {
+                created: date,
+                userHandle: userData.Handle,
+                userImage: userData.ImageUrl,
+                userBackground: userData.BackgroundUrl,
+                userName: userData.Name,
+                userVerified: false,
+            };
+
+            return projectSnapshot.ref.update(newProjectFields);               
+        });
+} catch (e) {
+    console.log("failed updating user data in project doc: ", e);
+    return false;
+}
+
+</code></pre>
+
+
+                </div>
+                <div class="col-sm-offset-3 col-sm-9 project-supporting-text-div">
+                    <div class="projectsDiv-panel" style="display:inherit;">
+                        <h4>Unit test assuring legitimate updates are allowed</h4>
+                    </div>
+                    <div class="projectsDiv-panel">
+                        <p>
+                            This piece of code can be run on command, and it uses a testing db emulator provided by
+                            Firebase. Alongside this unit test, I wrote a number of other tests in order to ensure basic
+                            functionality of my app works properly. Before releasing code updates, I can check that
+                            legitimate requests are allowed to interact with the db, and that illegitimate requests
+                            would be denied.
+                        </p>
+                    </div>
+
+                    <pre><code class="language-typescript">it("can update user document with whitelisted fields", async () => {
+    const admin = getAdminFirestore();
+    const setUpDoc = admin.collection('users').doc(myId);
+    const timestamp = new Date().getTime();
+    await setUpDoc.set({
+        name: "",
+        handle: myHandle,
+        imageUrl: "",
+        backgroundUrl: "",
+        bio: "",
+        created: timestamp 
+ });
+
+    const db = getFirestore(myAuth);
+    const myUserDocument = db.collection('users').doc(myId);
+    const legitimateRequest = {
+        name: "The Grinch",
+        imageUrl: "image.com/image.jpg",
+        bio: "Just ya know doing that whatever",
+        backgroundUrl: "background.com/image.png"
+    }
+
+    await firebase.assertSucceeds(
+   myUserDocument.set(legitimateRequest, { merge: true })
+);
+});
+</code></pre>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </div>
 
 <script src="scripts/prism.js"></script>

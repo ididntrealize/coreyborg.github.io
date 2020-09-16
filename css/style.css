@@ -250,7 +250,7 @@ pre{
 #mainBodyContainer{
 	width:100%;
 	border-top:7px solid #34508e;
-	background:white;
+	background: rgba(255,255,255,.3)
 }
 .border-divider-top{
 	margin-top:0px;
@@ -273,7 +273,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f3f4', end
 	background:url("../images/background-texture-vertical.jpg");
 }
 .mainBodyContent{
-	background:white;
+	background:none;
 	padding-bottom:35px;
 }
 .mainBodyContent.subtle-background {
@@ -417,8 +417,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f3f4', end
 	margin-bottom:15px;
 }
 .project-tag-span{
-	color:#fff;
-	background:rgb(70, 55, 43);
+    background: #fff;
+    color: rgb(70, 55, 43);
+    border: 1px solid rgb(70, 55, 43);
 	padding:3px 10px;
 	display: inline-block;
 	margin:0px 5px 5px 5px;
@@ -454,6 +455,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f3f4', end
 	}
 	.siteNameHeading{
 		font-size:36px;
+        text-align: left;
 		
 	}
 }
@@ -504,6 +506,9 @@ footer a:focus{
 	color:grey;
 	font-size:25px;
 	border-right:3px solid #19289C;
+}
+.project-description-div h4{
+	text-align: left;
 }
 .dev-vs-design-div{
 	margin-bottom:25px;

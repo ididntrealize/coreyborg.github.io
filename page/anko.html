@@ -1,0 +1,156 @@
+<link href="css/prism.css" rel="stylesheet" />
+<div class="mainBodyContent">
+
+    <div class="container">
+
+        <div class="project-description-div">
+            <div class="col-sm-offset-3 col-sm-9">
+                <h2>Anko</h2>
+            </div>
+            <div class="col-sm-offset-1 col-sm-11">
+                <img alt="anko.com responsive site preview - across device sizes"
+                    class="project-responsive-img img-responsive center-block"
+                    src="images/responsiveFullPreview-anko.png" />
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="project-tools-div">
+                        <h3>Tools used</h3>
+                    </div>
+                </div>
+                <div class="col-sm-9 ">
+                    <p class="project-tools-p">
+                        <span class="project-tag-span">&#8226;&nbsp;Javascript</span>
+                        <span class="project-tag-span">&#8226;&nbsp;Vue.js</span>
+                        <span class="project-tag-span">&#8226;&nbsp;Firebase.js</span>
+                        <span class="project-tag-span">&#8226;&nbsp;Cloud&nbsp;Database</span>
+                        <span class="project-tag-span">&#8226;&nbsp;Cloud&nbsp;Functions</span>
+                        <span class="project-tag-span">&#8226;&nbsp;Unit&nbsp;Tests</span>
+                        <span class="project-tag-span">&#8226;&nbsp;Typescript</span>
+                        <span class="project-tag-span">&#8226;&nbsp;SCSS</span>
+                        <span class="project-tag-span">&#8226;&nbsp;Github</span>
+                    </p>
+
+
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+
+                    <h3>My contribution</h3>
+                </div>
+                <div class="col-sm-9 project-supporting-text-div">
+                    <div class="projectsDiv-panel">
+
+
+                        <p>I worked with Anko as their primary eCommerce designer and manager for 11 months in 2018. I transformed their blank slate template into a high performance ecommerce machine, performing A/B experiments and incorporating analytic feedback into future designs. I was very active in Google Analytics and Google Optimize (A/B Testing) to inform future directions to take the site (and keep key stakeholders apprised). I also took on reviewing and incorporating direct user feedback into the site from screen share sessions performed by users on usertesting.com .
+
+                        </p>
+                        <p>
+                            I also implemented an all new checkout page in react with custom functionality requested by shareholders. The checkout page is the most important step of the conversion funnel, and you need to be positive that all it’s functionality works for every release, so we created unit tests. Everytime we dropped a new version, we cut down error prone human testing of each variation of a possible customer order from ~15 minutes to less than a minute. 
+                        </p>
+                        <p><i>*Due to Covid 19, Anko was forced to close all stores.</i></p>
+
+                        <a class="btn btn-success btn-lg" target="_blank" href="https://anko.com/"
+                            role="button">Visit Site* &raquo;</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <hr />
+
+            <div class="row">
+
+                <div class="col-sm-3">
+
+                    <h3>Highlighted design element</h3>
+                </div>
+                <div class="col-sm-9 project-supporting-text-div">
+
+                    <div class="projectsDiv-panel">
+
+
+
+                        <div class="row">
+                            <div class="col-xs-12">
+
+                                <div>
+
+                                    <h4 class="text-left" style="padding-top:0;">Holidays Special Landing page</h4>
+
+                                    <p>
+                                        I designed and built this page, which converted over twice as much as any other page during the Holidays. It features a slider of suggested gifts based on who the gift is for, and what your budget is! 
+
+                                        <p>
+                                </div>
+
+                                <img alt="Anko Holidays landing page"
+                                    class="img-responsive project-design-img pull-left"
+                                    src="images/holidays-landing-page-desktop.jpg"
+                                    style="margin:0;" />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="row">
+                <div class="col-sm-3">
+
+                    <h3>Highlighted Code</h3>
+                </div>
+                <div class="col-sm-9 project-supporting-text-div">
+                    <div class="projectsDiv-panel" style="display:inherit;">
+                        <h4>British English Translator</h4>
+                    </div>
+                    <div class="projectsDiv-panel">
+                        <p>
+                            Anko is an Australian brand, so their product databases are filled with British spellings (like colour, or realise). I wrote this script to americanize the spelling and units for their products.
+                        </p>
+                    </div>
+
+                    <pre><code class="language-javascript">function translateEnglish(fullText) {
+    //preserve original text to test against updated string
+    let newStr = fullText;
+    
+    //split all words into an array, discounting HTML tags
+    let tagsToSpaces = fullText.replace(/(<([^>]+)>)/ig, " "),
+        wordsToCheck = tagsToSpaces.split(' ');
+    
+    //check each word in passed string with the spelling diff lookup table
+    wordsToCheck.forEach(function (elem) {
+        let formatted = elem.toLowerCase();
+        formatted = formatted.replace(/[^a-zA-Z ]/g, "");
+    
+        if (spellingDifferences[formatted]) {
+    
+            let anythingRevomed = elem.replace(/[a-zA-Z ]/g, "");
+    
+            //AUS English word found, replace it (with any random formatting associated)
+            newStr = newStr.replace(elem, spellingDifferences[formatted] + anythingRevomed);
+    
+            if (debug) { console.log(elem + ' => ' + spellingDifferences[formatted] + anythingRevomed) }
+    
+        }
+    });
+    
+    return newStr;
+    
+    }
+                     
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="scripts/prism.js"></script>

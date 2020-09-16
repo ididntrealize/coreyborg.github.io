@@ -15,9 +15,6 @@ function switchPage(event) {
 
 function changeToPage(pageName) {
 
-    
-    console.log('change to page: ', pageName)
-
     var pageExtension = "page/" + pageName;
     var scrollToLocation = "#mainBodyContainer";
     var navBarHeight = 62;
@@ -35,14 +32,20 @@ function changeToPage(pageName) {
 
         setTimeout(function () {
             /*check if scroll necessary */
-            if (pageName.includes("#")) {
-                scrollToLocation = "#" + pageName.split("#")[1];
-            }
+            // if (pageName.includes("#")) {
+            //     scrollToLocation = "#" + pageName.split("#")[1];
+            // }
 
-            $('html, body').animate({
-                scrollTop: $(scrollToLocation).offset().top - navBarHeight
-            }, 1000);
-        }, 400);
+            // let userPosition = $('html, body').scrollTop();
+            // let pageTop = $(scrollToLocation).offset().top - navBarHeight;
+            // let animationSpeed = userPosition > 1400 ? 1400 : 666;
+
+            // if(userPosition !== pageTop){
+            //     $('html, body').animate({
+            //         scrollTop: $(scrollToLocation).offset().top - navBarHeight
+            //     }, animationSpeed);
+            // }
+        }, 200);
 
     });
 

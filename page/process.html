@@ -1,97 +1,182 @@
 <div class="mainBodyContent">
 
 
-	<style type="text/css">
-		em{
-			font-size: 20px;
-			margin-top: 24px;
-			margin-bottom: 5px;
-		}
-		p{
-			margin-left:10px;
-		}
-		h3{
-			margin-top:45px;
-		}
-		h3:first-child{
-			margin-top:0px;
-		}
-		.mainBodyContent ul{
-			margin-left:35px;
-			
-			
-		}
-	</style>
-	
+    <style type="text/css">
+        em {
+            font-size: 20px;
+            margin-top: 24px;
+            margin-bottom: 5px;
+        }
 
-	<div class="row border-divider-top" style="padding:35px 0px; margin-top:0px;">
+        p {
+            margin-left: 10px;
+        }
 
-			<div class="row">
-				
-					<h2 class="center-text">Web Design Process</h2>
+        h3 {
+            margin-top: 45px;
+        }
 
-				<div class="col-sm-10 col-sm-offset-1">
-					<div class="col-md-6 col-md-push-6">
-						<div class="text-panel">
+        h3:first-child {
+            margin-top: 0px;
+        }
 
-									<h3>
-											Building a Web Presence
-										</h3>
-							
-							<p class="">
-									<em>Starting from scratch, building a website is overwhelming! </em>
-									An ever changing digital marketplace and the amount of different skills needed to create a website 
-									would be daunting without a knowledgable and supportive community. 
-									So let me help you get started!
-								
-								</p>
-
-						</div>
-
-						
+        .mainBodyContent ul {
+            margin-left: 35px;
 
 
-					</div>
-					<div class="col-md-6 col-md-pull-6" style="padding-top:20px;">
-
-						<div class="center-block">
-							<img alt="Coreyborg coding through frustration on a couch with custom cloud laptop artwork" class="img-responsive center-block" src="images/corey-couch-cloud.jpg" style="border-radius:15px;" />
-
-						</div>
-						<div class="center-text">
-							<!--h2 style="font-size:40px;">Corey Boiko</h2-->
-							<!--p>Designer and Developer</p-->
-						</div>
-
-					</div>
+        }
 
 
+        ul.tree,
+        ul.tree ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-				</div>
-			</div>
-		
+        ul.tree ul {
+            margin-left: 10px;
+        }
 
-		</div>
-	<div class="row border-divider-top" style="padding: 35px 0px;">	
-		<h2 class="text-center">Websites in a Nutshell </h2>
-		<div class="col-sm-10 col-sm-offset-1">
-			
-			<div style="background:white;padding-top:25px;">	
-				<h3 id="creating-content">
-			Creating purposeful content
-				</h3>
+        ul.tree li.h-2 {
+            font-size: 2.6rem;
+            padding-top: 25px;
+
+        }
+
+        ul.tree li.h-3 {
+            font-weight: bold;
+            font-size: 1.7rem;
+            padding-top: 15px;
+
+        }
+
+        ul.tree li.h-4 {
+            font-weight: bold;
+            padding-top: 10px;
+
+        }
+
+        ul.tree li {
+            margin: 0;
+            padding: 0 7px;
+            line-height: 24px;
+            border-left: 1px solid rgb(100, 100, 100);
+            font-size: 1.5rem;
+            font-weight: normal;
+
+        }
 
 
 
-				<em>How to prepare text for your pages:</em>
-				<p>
-					Start writing as much as you can without deleting anything. 
-					Get as much of your story together into a single document as you can. 
-					The easiest way to know what pages you'll need is to get everything together, then divide it up.
-					To brainstorm ideas of what to write, start by listing as many related keywords to your idea as you can.
-					You'll need this list later for SEO, so keep it somewhere you can find it.
-				</p>
-				<!--
+        ul.tree>li:first-child {
+            border-left: 0;
+        }
+
+        ul.tree li:last-child {
+            border-left: 0;
+        }
+
+        ul.tree>li:first-child:before {
+            display: none;
+        }
+
+        ul.tree>li:last-child:before {
+            display: none;
+        }
+
+
+
+        ul.tree li:before {
+            position: relative;
+            top: -0.3em;
+            height: 1em;
+            width: 12px;
+            color: white;
+            border-bottom: 1px solid rgb(100, 100, 100);
+            content: "";
+            display: inline-block;
+            left: -7px;
+        }
+
+        ul.tree li:last-child:before {
+            border-left: 1px solid rgb(100, 100, 100);
+        }
+    </style>
+
+
+    <div class="row border-divider-top" style="padding:35px 0px; margin-top:0px;">
+
+        <div class="row">
+
+            <h2 class="center-text">Web Design Process</h2>
+
+            <div class="col-sm-10 col-sm-offset-1">
+                <div class="col-md-6 col-md-push-6">
+                    <div class="text-panel">
+
+                        <h3>
+                            Building a Web Presence
+                        </h3>
+
+                        <p class="">
+                            <em>Starting from scratch, building a website is overwhelming! </em>
+                            An ever changing digital marketplace and the amount of different skills needed to create a
+                            website
+                            would be daunting without a knowledgable and supportive community.
+                            So let me help you get started!
+
+                        </p>
+
+                    </div>
+
+
+
+
+                </div>
+                <div class="col-md-6 col-md-pull-6" style="padding-top:20px;">
+
+                    <div class="center-block">
+                        <img alt="Coreyborg coding through frustration on a couch with custom cloud laptop artwork"
+                            class="img-responsive center-block" src="images/corey-couch-cloud.jpg"
+                            style="border-radius:15px;" />
+
+                    </div>
+                    <div class="center-text">
+                        <!--h2 style="font-size:40px;">Corey Boiko</h2-->
+                        <!--p>Designer and Developer</p-->
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="row border-divider-top" style="padding: 35px 0px;">
+        <h2 class="text-center">Websites in a Nutshell </h2>
+        <div class="col-sm-10 col-sm-offset-1">
+
+            <div style="background:white;padding:25px;">
+                <h3 id="creating-content">
+                    Creating purposeful content
+                </h3>
+
+
+
+                <em>How to prepare text for your pages:</em>
+                <p>
+                    Start writing as much as you can without deleting anything.
+                    Get as much of your story together into a single document as you can.
+                    The easiest way to know what pages you'll need is to get everything together, then divide it up.
+                    To brainstorm ideas of what to write, start by listing as many related keywords to your idea as you
+                    can.
+                    You'll need this list later for SEO, so keep it somewhere you can find it.
+                </p>
+                <!--
 					
 					https://www.copyblogger.com/seductive-web-copy/
 						-You need to add something to start in here about visualizing customers, 
@@ -110,23 +195,26 @@
 					trends.google.com
 
 				-->
-				
-				
-				<em>Goal oriented conversion</em>
-				<p>
-					It's important to keep in mind a specific goal for what you want people to do once they come to the site.
-					Each page will be designed to give users the information they need in order to make a choice involving your site.
-					Your site should present viewers with the choice you want them to make once they have been well informed.
-					Some common choices for users to make are: 
-				</p>
-					<ul>
-						<li>Purchasing a product</li>
-						<li>Subscribing to a newsletter</li>
-						<li>Following on social media</li>
-						<li>Contacting you</li>
-					</ul>
-				
-				<!--
+
+
+                <em>Goal oriented conversion</em>
+                <p>
+                    It's important to keep in mind a specific goal for what you want people to do once they come to the
+                    site.
+                    Each page will be designed to give users the information they need in order to make a choice
+                    involving your site.
+                    Your site should present viewers with the choice you want them to make once they have been well
+                    informed.
+                    Some common choices for users to make are:
+                </p>
+                <ul>
+                    <li>Purchasing a product</li>
+                    <li>Subscribing to a newsletter</li>
+                    <li>Following on social media</li>
+                    <li>Contacting you</li>
+                </ul>
+
+                <!--
 					https://www.crazyegg.com/blog/increase-your-conversion-rate/
 						-Awareness, Interest, Consideration, Conversion
 
@@ -135,30 +223,30 @@
 						-create a video to humanize brand 
 				-->
 
-				
-				
-				<em>What to include in 'Your story'</em>
-				<p>
-					Make sure to explain why your viewers will benefit from making the choice you want them to make. 
-					Describe to them why they will benefit from interacting with your site. 
-					For example, you can use this guide to start work on your site by yourself.
-					If you get stuck on any of the steps, you can hire me to push through the most difficult steps!
-				</p>	
-				<!-- 
+
+
+                <em>What to include in 'Your story'</em>
+                <p>
+                    Make sure to explain why your viewers will benefit from making the choice you want them to make.
+                    Describe to them why they will benefit from interacting with your site.
+                    For example, you can use this guide to start work on your site by yourself.
+                    If you get stuck on any of the steps, you can hire me to push through the most difficult steps!
+                </p>
+                <!-- 
 					Maybe a button here - [ seriously, get in touch ] 
 					Talk about how to make copy scannable
 
 				-->
-				
-				
-				<em>How to prepare images for your site</em>
-				<p>
-					Each page on your site will need a mix of pictures and text in order to be enticing.
-					Find photos that help prove the information you are providing your viewers. 
-					Start saving them into the same folder where you have prepared text for your pages.
-					Once you've collected many images, it will be easier to pair them with text.
-				</p>
-				<!--
+
+
+                <em>How to prepare images for your site</em>
+                <p>
+                    Each page on your site will need a mix of pictures and text in order to be enticing.
+                    Find photos that help prove the information you are providing your viewers.
+                    Start saving them into the same folder where you have prepared text for your pages.
+                    Once you've collected many images, it will be easier to pair them with text.
+                </p>
+                <!--
 					what about if they need to use stock images?
 					what about screenshots?
 					what about oHMAYGHDH just make some edits here, this is frustratingly vague
@@ -167,203 +255,424 @@
 				-->
 
 
-				
-				<em>How to design a site layout</em>
-				<p>
-					Once you have an idea for the amount of content to display and the possible interactions users might make,
-					you should layout your images and text together (either on paper, or in a word document) as a funnel ending in an action you want users to take.
-					For example, the pages on this website always end in a contact form.
-				</p>
 
-				<!--
-					could use alot more useful information here
-					site journey ->
-						Seciton to introduce your product/service
-						Section to pique interest (why yours is the right choice)
-						Section to suggest conversion
-							Downsell to secondary conversion
-								etc.
+                <em>How to prepare a site layout</em>
+                <p>
+                    Once you have an idea for the amount of content to display and the possible interactions users might
+                    make, you should layout your images and text together (either on paper, or in a word document). Keep
+                    in mind that all your pages should be designed to obviously offer the choice that you want users to
+                    make. If your users don’t make that choice immediately, then you should offer relevant information
+                    about why that choice is beneficial, and then give them another opportunity to make that choice.
+                    Some examples of a choice you might want users to make:
 
-				-->
+                </p>
+                <ul>
+                    <li>Join your newsletter</li>
+                    <li>Contact you</li>
+                    <li>Buy a product</li>
+                </ul>
 
-				<hr/>
+                <hr />
+
+                <h3 id="building-the-site">
+                    Building the actual website
+                </h3>
+
+                <em>A guide through your options</em>
+                <p>
+                    The number of complex terms that are thrown around about web design make it hard to focus in on
+                    exactly what is suitable to you.
+                    It's easy to get lost in thinking you need something, without really understanding what that thing
+                    is.
+                    That's why I've created this guide to creating a website, and what you'll need to do given your
+                    initial choices.
+                </p>
+
+                <ul class="tree">
+                    <li class="last h-2">Choose website builder
+                        <ul>
+                            <li class="h-3">Using hosting from website builder
+                                <ul>
+                                    <li>Choose theme</li>
+                                    <li>Create pages in builder & fill with content</li>
+                                    <li>(Set up blog)</li>
+                                    <li class="last">Done!</li>
+                                </ul>
+                            </li>
+                            <li class="h-3">Use your own hosting
+                                <ul>
+                                    <li class="h-4">Set up local environment</li>
+                                    <li class="h-4">Choose theme
+                                        <ul>
+                                            <li>Create pages in builder & fill with content</li>
+                                            <li class="last">(Set up blog)</li>
+                                        </ul>
+                                    </li>
+                                    <li class="h-4">Create custom theme
+                                        <ul>
+                                            <li>Design html templates
+                                                <ul>
+                                                    <li>Home</li>
+                                                    <li>Nav</li>
+                                                    <li>Header</li>
+                                                    <li>Footer</li>
+                                                    <li>Page</li>
+                                                    <li class="last">blog templates</li>
+                                                </ul>
+                                            </li>
+                                            <li class="last">Create pages in builder & fill with content</li>
+                                        </ul>
+                                    </li>
+                                    <li class="h-4">Transfer files and database to live environment</li>
+                                    <li class="h-4 last">Done!</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="last h-2">Create a custom site
+                        <ul>
+                            <li>Buy a domain and hosting plan (optional)</li>
+                            <li>Create purposeful content</li>
+                            <li>Build static HTML and CSS files with content</li>
+                            <li>Add any dynamic functionality with Javascript</li>
+
+                            <li class="">Upload files to hosting company</li>
+                            <li class="last">Done!</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <em>Deciding to use a website builder</em>
+                <p>
+                    At this point, you need to make a choice of whether to build the site out yourself, or to use a
+                    website builder. Using a website builder (like squarespace, wordpress, wix, etc.) is usually what
+                    independent businesses choose to do, but it definitely has its trade offs.
+
+                </p>
+                <ul>
+                    <li>Squarespace</li>
+                    <li>Wordpress</li>
+                    <li>Google Sites</li>
+                    <li>Wix</li>
+                </ul>
 
 
-						
-				<h3 id="hosting">
-			Hosting your website
-				</h3>
-				
-				<em>Putting the design onto the web</em>
-				<p>
-					At this point in the process, you need to transfer the images and text to a place where anybody can see them.
-					They will type yourdomain.com into their web browser (or click a link), 
-					and the browser will ask your hosting company's server for the website files you will create.
-				</p>
-				
-				<em>What you pay hosting companies for</em>
-				<p>
-					a server is pretty much a computer dedicated (24/7) to sending your website out to other computers. 
-					Along with the electricity to run that computer, hosting companies usually offer additional services.
-					Some common tools they offer are:
-				</p>
-					<ul>
-						<li>custom website builders</li>
-						<li>a secure way to change your website files</li>
-						<li>registering domains</li>
-						<li>email @yourdomain.com</li>
-					</ul>
-					
-				<em>How to spot freemium traps</em>
-				<p>
-					It is also possible to do this for free, although you will be severely limited in what you can do.
-					Most of the website builders which have a free option are agressively geared towards you purchasing their full verison.
-					I don't recommend using freemium sites for hosting, because once you've already learned how to use their site to build yours,
-					you are less likely to switch (and more likely to pay more). 
-					Given that addendum, here are some free hosting options:
-				</p>
-					<ul>
-						<li>wix.com</li>
-						<li>wordpress.com</li>
-						<li>blogger.com</li>
-					</ul>
-					
-				<em>Forwarding and masking</em>
-				<p>
-					If you choose a free hosting solution but want to use your own custom domain name, 
-					you will need to do a process called "forwarding". 
-					You can call the support line where you bought the domain name, and they can guide you through this process.
-				</p>	
-				
-				
-				<hr/>
-		
-				<h3 id="advertising">
-			Advertising your website
-				</h3>
-				
-				<em>Inbound marketing</em>
-				<p>
-					While your users are evaluating whether to make the choice you want them to make on your site,
-					they should be ascertaining value.
-					You will need to keep their attention long enough for them to arrive at your call to action,
-					then offer them a path to supplimentary information, and a secondary value proposition and call to action.
-				</p>
-				
-				<em>Word of mouth</em>
-				<p>
-					It may be tempting to rely on spreading your website by talking to people about it.
-					While it is important to notify your community about updates to your services,
-					you can't rely solely on talking about your website to promote it.
-					In fact, one of the main reasons why people make websites is to remove the need to describe your business to one person at a time.
-				</p>
-				
-				
-				
-					<em>Contribute to online communities</em>
-				<p>	
-					A good way to increase the number of views your website recieves is to find related communities online.
-					For example, I sometimes contribute to reddit.com/r/web-design. 
-					People go there to ask for other developers to review their portfolios or profesional sites.
-					You can post your site, or comment on others and ask that they do the same.
-				</p>
-				
-				
-				
-				
-				
-					<em>Search Engine Optimizaiton</em>
-				<p>
-					Search engines are constantly scraping through new websites to find relevant content to provide their users.
-					You can use tools, like trends.google.com to find the most commonly searched for terms per region.
-					There are some standard practice methods to becoming more available to search engines, such as:
-				</p>
-					<ul>
-						<li>Having other sites link to yours</li>
-						<li>Providing text descriptions of images</li>
-						<li>Logically organizing headings and titles</li>
-						<li>Including meta keywords, descriptions, and instructions</li>
-					</ul>
-				
-				
-				
-				
-					<em>Paid advertising</em>
-				<p>
-					Many social media sites and search engines offer to show your content more often if you pay them.
-					For example, google ads will let you bid for the top search result.
-					Bids happen every time a user searches for keywords that you designate.
-					You can change your settings to pay more or less, based on how relevant the specific search was to you.
-					You can also set limits on how much you are willing to spend in a day.
-					Facebook has an interesting advertising structure as well, 
-					allowing you to pay based on how many times your page is shown or how many times someone actually clicks on your ad.
-				
-				</p>	
-					
-					
-				<!--em>Measuring effectiveness</em-->
-				
-			</div>	
-		</div>	
-						
-	</div>
-	
-	
+                <em>The benefits of using a website builder</em>
+                <p>
+                    Building a website using a builder is by far the easiest and most convenient option for building a
+                    personal or small business website. The process basically consists of choosing a theme (or
+                    template), and filling in your pages using the website builder tools. In wordpress, for example,
+                    they have an editor that looks like microsoft word - if you can make it in word, you can make it in
+                    wordpress. Then, when you want to make updates to your site, it’s fast and convenient.
 
-	
-<div class="row border-divider-top" style="padding:35px 0px">
-		<div class="col-sm-10 col-sm-offset-1">
-						<h2 class="center-text">
-							DIY with a little help
-						</h2>
-			<div class="row">
-				<div class="col-md-6" style="padding-top:50px;">
-					<img alt="Coreyborg feeling successful" class="img-responsive center-block" src="images/profile-mountains.jpg" style="border-radius:15px;"/>
-				
-				</div>
-				<div class="col-md-6">
-					<div class="text-panel about-panel">
-						
-						
-								
-						
-						<p class="">
-							<em>In order for your site to succeed, the web design process can span months and cost thousands of dollars!</em>
-							For that reason, many people decide to try to tackle the task on their own. 
-							However, without the proper tools and knowledge of web technologies, your site is not likely to be profitable. 
-						</p>
 
-						
-					</div>
-					<ul>
-							
-							<li>
-								<a onclick="switchPage.call(this, event);" href="experience.html" class="internal-link center-text">
-									<button type="button" class="btn btn-block btn-default btn-lg center-block">
-										<i class="fas fa-1x fa-briefcase"></i>
-										&nbsp;Professional Experience
-									</button>
-								</a>
-							</li>
-							<li>
-								<a onclick="switchPage.call(this, event);" href="portfolio.html" class="internal-link center-text">
-									<button type="button" class="btn btn-block btn-default btn-lg center-block">
-										<i class="fas fa-1x fa-code"></i>
-										&nbsp;Website portfolio
-									</button>
-								</a>
-							</li>
-						
-						</ul>
-				</div>
-				
-			</div>
-		
-			
-		</div>
-	</div>
+                </p>
 
-		
+                <em>The tradeoffs of using website builders</em>
+                <p>
+                    Using website builders isn’t all peaches and cream. For one, most website builders use a freemium
+                    model and know just when they can hook you to pay more. Once you’ve committed to one it’s not easy
+                    to switch, and you’ll pay more every month for using their plans. Premium themes cost extra as well,
+                    and can have certain features turned off unless you pay. Sites built with website builders tend to
+                    be formulaic, and it is likely that you won’t be able to get exactly what you want.
+
+
+                </p>
+
+                <em>Getting the most from your website builder</em>
+                <p>
+                    There are ways to use a website builder, without needing to pay the company extra! However, setting
+                    it up yourself can be difficult. I would highly recommend installing wordpress on your own hosting
+                    (follow the guide at wordpress.org - NOT wordpress.com). Then once wordpress is set up on your
+                    domain, you can access all of the exact same stuff as a site on wordpress.com
+
+                </p>
+
+                <em>Creating custom wordpress themes</em>
+                <p>
+                    Sometimes you just need a pixel-perfect unique design for your site as well as a user-friendly way
+                    to update it and host blog authors. And who hasn’t, from time to time? This method is the best of
+                    both worlds, you can create exactly what you’re envisioning as HTML templates, and then have
+                    wordpress fill in any dynamic content (blog posts, the text on web pages, site title, site headline,
+                    etc.). I recommend doing this if you are planning any special functionality for your site, beyond
+                    just showing people something pretty.
+                </p>
+
+                <em>Creating your site from scratch</em>
+                <p>
+                    Personally, I would be very proud of anybody who took on this task. There’s so much to learn about
+                    document formats that you use to tell computers how to visualize your designs. For example, you
+                    write an entirely linear file, but the computer has to know it is in two columns! To write that
+                    linearly, you would need to learn about HTML and CSS.
+                </p>
+                <p>
+                    Very few people do end up learning about it, though, and that’s why I get paid the big bucks.
+                    Additionally, there are many tools that can help you create beautiful and interactive designs
+                    without having to dive too deep. After gaining a basic understanding of HTML and CSS, I recommend
+                    looking into Twitter Bootstrap, and jQuery.
+                </p>
+
+
+
+                <hr />
+
+
+
+                <h3 id="hosting">
+                    Domains &amp; Hosting
+                </h3>
+
+                <em>How servers allow others to see your webpage</em>
+                <p>
+                    When you type yourdomain.com into a web browser (like Chrome or Safari), a lot of things happen
+                    automagically behind the scenes. For example, your browser looks up who owns the company which
+                    registered the domain (A hosting company). That company owns a computer running 24/7 (a server),
+                    designated to send your website to anybody who asks.
+
+                </p>
+
+                <em>What you pay hosting companies for</em>
+                <p>
+                    Your hosting company owns the computer which your server is on, you pay hosting companies for
+                    maintenance, easy access to make updates to your site, and additional services. Some common tools
+                    they offer are:
+                </p>
+                <ul>
+                    <li>Custom website builders</li>
+                    <li>A secure way to edit your website files</li>
+                    <li>Registering domains</li>
+                    <li>email @yourdomain.com</li>
+                    <li>Database and storage</li>
+                </ul>
+
+                <em>How to spot freemium traps</em>
+                <p>
+                    It is possible to get hosting and a website builder for free, although they charge far more for
+                    necessary premium features that you only notice once you’ve committed to staying with them. Most of
+                    the website builders which have a free option are aggressively geared towards you purchasing their
+                    full version. I don't recommend using freemium sites for hosting, because once you've started with
+                    their tools, you are less likely to switch (and more likely to pay more). Given that addendum, here
+                    are some free hosting options:
+                </p>
+                <ul>
+                    <li>wix.com</li>
+                    <li>wordpress.com</li>
+                    <li>weebly.com</li>
+                </ul>
+
+                <em>Free hosting done right</em>
+                <p>
+                    It is possible to host your website for free as well. Some options require that the website is not
+                    built with a website builder, like Github. In order to build a website without a website builder,
+                    you will have to look into HTML. Other options allow you to use a builder AND still add your own
+                    code, like Google Sites. If you are interested in a dynamic website, it can be essential to be able
+                    to add your own code to it.
+                </p>
+                <ul>
+                    <li>Github.com</li>
+                    <li>sites.google.com</li>
+                </ul>
+
+                <em>Forwarding your domain to your host</em>
+                <p>
+                    If you choose a free hosting solution but want to use your own custom domain name, you will need to
+                    do a process called "forwarding". You can call the support line where you bought the domain name,
+                    and they can guide you through this process.
+                </p>
+
+
+                <hr />
+
+                <h3 id="advertising">
+                    Advertising your website
+                </h3>
+
+                <em>Inbound marketing to ease users through your funnel</em>
+                <p>
+                    While your users are evaluating whether to make the choice you want them to make on your site, they
+                    should be getting value. You will need to keep their attention long enough for them to arrive at as
+                    many calls to action as possible. As your user travels down the page, you should be supplying them
+                    with useful information interspersed with calls to action. and a secondary value proposition and
+                    call to action. That way, at any point of the funnel, a user is not far from the choice you want
+                    them to make. The art of it comes into it trying to find the thin line between not getting in the
+                    way of people who know what they want, and pushing your sale on people who need more convincing.
+                </p>
+
+                <em>Relying on more than just word of mouth</em>
+                <p>
+                    It may be tempting to rely on spreading your website by talking to people about it. While it is
+                    important to notify your community about updates to your services, you can't rely solely on talking
+                    about your website to promote it. In fact, one of the main reasons why people make websites is to
+                    remove the need to describe your business to one person at a time. If you are able to personally
+                    address your users, I would recommend just doing that. If you’re doing something that people are
+                    talking about a lot already, then that can be harnessed with a website. If that’s not already
+                    happening for you, don’t count on it starting once you’ve made a website.
+
+                </p>
+
+                <em>Search Engine Optimizaiton</em>
+                <p>
+                    SEO is important when a search engine is deciding which websites to display from a search, but it
+                    can’t automatically put you at the top of that list. Most of the methods that people use aren’t an
+                    exact science, because the search engine company is constantly making changes to find better sites
+                    and finding ways to prevent you from cheating it. Search engines are constantly scraping through new
+                    websites to find relevant content to provide their users. Some standard practice methods to becoming
+                    more available to search engines:
+
+                </p>
+                <ul>
+                    <li>Optimize engagement on your site</li>
+                    <li>Provide content designed for accessibility concerns</li>
+                    <li>Have other sites link to yours (backlinks)</li>
+                    <li>Include meta information for all your pages and content</li>
+                </ul>
+
+                <em>Augmenting your SEO with paid advertising</em>
+                <p>
+                    Good placement on search engines is very dependent on if your site is already bonafide (for example,
+                    when users don’t try other search results after yours - suggesting they are satisfied with your
+                    site). So it can be very important for new sites to artificially place themselves higher in the
+                    results before they can become bonafide. For this reason, many new businesses choose to start paid
+                    advertisements.
+
+                </p>
+                <p>
+                    For example, google ads will let you bid for the top search result. Bids happen every time a user
+                    searches for keywords that you designate. You can change your settings to pay more or less, based on
+                    how relevant the specific search was to you. You can also set limits on how much you are willing to
+                    spend in a day. Facebook has an interesting advertising structure as well, allowing you to pay based
+                    on how many times your page is shown or how many times someone actually clicks on your ad.
+                </p>
+
+                <em>Imagining your ideal customer</em>
+                <p>
+                    Before purchasing an ad, there are some important marketing exercises to go through. First, try to
+                    imagine very specific characteristics of your ideal customer. The old fashioned method is to
+                    actually write out the characteristics of a handful of realistic seeming people. If you like, you
+                    can create many profiles, and name them and everything. In order to prepare for targeting your ads,
+                    try to at least come up with:
+                </p>
+                <ul>
+                    <li>What interaction they take with your site (purchase, email list, contact, etc.)</li>
+                    <li>Physical location (or more general: city, state, country, etc.)</li>
+                    <li>Age (or age range)</li>
+                    <li>Interests/hobbies (imagine if you will)</li>
+                </ul>
+
+
+
+
+                <em>Preparing to purchase your ad</em>
+                <p>
+                    Setting up the actual ad (on google ads, for example) is relatively cut and dry. The real finesse
+                    comes in by creating the perfect messaging for the perfect person. Even if you’ve already imagined
+                    the perfect customer, that raises some important questions:
+
+                </p>
+                <ul>
+                    <li>How many people exist who match my perfect customer? </li>
+                    <li>What’s the exact wording that my perfect customer would use?</li>
+                    <li>What distinguishes my services (for them) from their other options?</li>
+                    <li>As my ad is being shown to people, how can I monitor what works well?</li>
+                </ul>
+                <p> My favorite tool for investigating target markets is trends.google.com . You can observe the volume
+                    of searches based on location, so you can figure out the best wording for your ad. For example,
+                    maybe “cupcake” gets less searches than “muffin”, so your bakery company might want to consider
+                    muffin.
+                </p>
+
+
+                <em>The mechanics behind ad auctions</em>
+                <p>
+                    When you create a campaign for your ad, you designate things like when to show the ad and how much
+                    you allot to spend on the ad per day. This allows your ad provider to choose an ad whenever a
+                    relevant search happens. For example, if multiple people are all buying ads for the keywords
+                    “muffin”, “bakery”, and “gingerbread”, then google needs to be able to choose which ad shows when
+                    somebody searches for muffin!
+                </p>
+                <p>
+                    You can change your campaign settings to budget more or less per ad and per day. You also have the
+                    option to pay per click, rather than per visualization.
+                </p>
+
+                <em>Incorporating feedback into further campaigns</em>
+                <p>
+                    As your ad campaign progresses, you will be able monitor progress. It is paramount to constantly
+                    learn from campaigns, and adjust as necessary. You’ll never hit a bullseye on a target you can’t
+                    see. It is also important to note you can view ad traffic as separate from normal traffic, so you
+                    can see exactly what you’re getting from ad-generated visits to your site.
+                </p>
+
+
+
+                <!--em>Measuring effectiveness</em-->
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="row border-divider-top" style="padding:35px 0px">
+        <div class="col-sm-10 col-sm-offset-1">
+            <h2 class="center-text">
+                DIY with a little help
+            </h2>
+            <div class="row">
+                <div class="col-md-6" style="padding-top:50px;">
+                    <img alt="Coreyborg feeling successful" class="img-responsive center-block"
+                        src="images/profile-mountains.jpg" style="border-radius:15px;" />
+
+                </div>
+                <div class="col-md-6">
+                    <div class="text-panel about-panel">
+
+
+
+
+                        <p class="">
+                            <em>In order for your site to succeed, the web design process can span months and cost
+                                thousands of dollars!</em>
+                            For that reason, many people decide to try to tackle the task on their own.
+                            However, without the proper tools and knowledge of web technologies, your site is not likely
+                            to be profitable.
+                        </p>
+
+
+                    </div>
+                    <ul>
+
+                        <li>
+                            <a onclick="switchPage.call(this, event);" href="experience.html"
+                                class="internal-link center-text">
+                                <button type="button" class="btn btn-block btn-default btn-lg center-block">
+                                    <i class="fas fa-1x fa-briefcase"></i>
+                                    &nbsp;Professional Experience
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="switchPage.call(this, event);" href="portfolio.html"
+                                class="internal-link center-text">
+                                <button type="button" class="btn btn-block btn-default btn-lg center-block">
+                                    <i class="fas fa-1x fa-code"></i>
+                                    &nbsp;Website portfolio
+                                </button>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
 
 
 
@@ -374,7 +683,3 @@
 
 
 </div>
-
-		
-
-		
