@@ -241,7 +241,8 @@ pre {
 
     #navbar-heading {
         padding-right: 0px;
-        font-size: 36px;
+        margin-top: 10px;
+        font-size: 56px;
     }
 
     .navbar-nav {
