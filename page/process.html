@@ -69,7 +69,7 @@
 
                                 <div id="collapse-1" class="panel-collapse collapse">
                                     <ul class="nav hidden-sm-down list-group">
-                                        <li class="nav-item"><a href="#creating-content" class="nav-link">Preparing
+                                        <li class="nav-item"><a href="#preparing-text" class="nav-link">Preparing
                                                 Text</a></li>
                                         <li class="nav-item"><a href="#goal-oriented-conversion" class="nav-link">Goal
                                                 Oriented Conversion</a></li>
@@ -805,11 +805,11 @@
             
             if (scrollValue > scrollStopTop && scrollValue < scrollStopBottom) {
 
-                console.log("scrollValue")
+                //console.log("scrollValue")
                 $('#affix-sidebar-scrollspy').addClass('affix');
                 $('#affix-sidebar-scrollspy').removeClass('bottom');
 
-                if(scrollValue > scrollStopTop + navbarHeight + 50) {
+                if(scrollValue > scrollStopTop + navbarHeight + 150) {
                     openAccordionPanel();
                 }
 

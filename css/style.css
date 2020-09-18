@@ -443,7 +443,8 @@ pre {
 }
 
 .skill-icon {
-    max-width: 200px;
+    max-width: 100%;
+    width: 200px;
 }
 
 #projectsDiv {
