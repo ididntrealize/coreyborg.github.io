@@ -859,14 +859,14 @@ ul.tree ul {
 }
 
 ul.tree li.h-2 {
-    font-size: 2.2rem;
+    font-size: 22px;
     padding-top: 25px;
 
 }
 
 ul.tree li.h-3 {
     font-weight: bold;
-    font-size: 1.7rem;
+    font-size: 17px;
     padding-top: 15px;
 
 }
