@@ -132,9 +132,8 @@ pre {
     font-family: 'Asul', sans-serif;
     overflow: visible;
     z-index: 10000000;
-    margin-top: 37px;
-    margin-bottom: 10px;
-    padding-left: 0px;
+    margin: 0;
+    padding: 0;
     -webkit-transition: margin 0.4s ease, font-size 0.4s ease;
     -moz-transition: margin 0.4s ease, font-size 0.4s ease;
     -o-transition: margin 0.4s ease, font-size 0.4s ease;
@@ -146,9 +145,38 @@ pre {
 
 }
 
+#navbar .navbar-nav .nav-item{
+    margin: 5px;
+
+}
+
+.navbar-toggler {
+    margin-right: 15px;
+}
+
 .navbar-wrapper .container {
     overflow: initial;
 
+}
+
+.navbar-wrapper .navbar {
+    padding: 0;
+
+}
+
+.navbar-nav .dropdown-item:active {
+    background: none;
+    color: #007bff;
+}
+
+.navbar-nav .dropdown-toggle::after {
+    margin-left: 0;
+    vertical-align: .1em;
+}
+
+#brand-div {
+    display: flex;
+    align-items: center;
 }
 
 #brand-div img {
@@ -184,6 +212,7 @@ pre {
 
 .navbar.shrink #navbar-heading {
     font-size: 40px;
+    line-height: 50px;
     margin-top: 2px;
     margin-left: 0px;
     margin-bottom: 0px;
@@ -215,8 +244,15 @@ pre {
     }
 
     .navbar a {
-
         font-size: 18px;
+    }
+
+    .navbar-nav .dropdown-menu {
+        border: 0;
+        text-align: center;
+    }
+    #navbar .navbar-nav .nav-item {
+        padding-bottom: 0;
     }
 }
 
@@ -242,7 +278,7 @@ pre {
     #navbar-heading {
         padding-right: 0px;
         margin-top: 10px;
-        font-size: 56px;
+        font-size: 50px;
     }
 
     .navbar-nav {
@@ -252,7 +288,7 @@ pre {
 
     #brand-div img {
         height: 95px;
-        padding-right: 5px;
+        padding: 5px 5px 5px 15px;
     }
 
     .navbar.shrink #navbar-heading {
@@ -288,7 +324,6 @@ pre {
 #mainBodyContainer {
     width: 100%;
     border-top: 7px solid #34508e;
-    background: rgba(255, 255, 255, .3)
 }
 
 .border-divider-top {
@@ -299,16 +334,26 @@ pre {
 .fade-gradient {
 
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6f3f4+0,000000+100&1+0,0+100 */
-    background: -moz-linear-gradient(top, rgba(246, 243, 244, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -moz-linear-gradient(top, rgba(246, 243, 244, .6) 0%, rgba(0, 0, 0, 0) 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(246, 243, 244, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(top, rgba(246, 243, 244, .6) 0%, rgba(0, 0, 0, 0) 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(246, 243, 244, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to bottom, rgba(246, 243, 244, .6) 0%, rgba(0, 0, 0, 0) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f3f4', endColorstr='#00000000', GradientType=0);
     /* IE6-9 */
 }
 
+.project-detail-title {
+    background: -moz-linear-gradient(bottom, rgba(246, 243, 244, .4) 0%, rgba(255, 255, 255, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(bottom, rgba(246, 243, 244, .4) 0%, rgba(255, 255, 255, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to top, rgba(246, 243, 244, .4) 0%, rgba(255, 255, 255, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f3f4', endColorstr='#00000000', GradientType=0);
+    /* IE6-9 */
+}
 
 #mainBodyContainer.on-home-page {
     border-top: 0;
@@ -402,8 +447,9 @@ pre {
 
 
 @media (max-width:750px) {
-    #offerDiv {
-        background-position: center;
+    #offerDiv {    
+        background-position-y: -70px;
+        background-size: auto;
     }
 
     #offerDiv p {
@@ -429,11 +475,11 @@ pre {
 
 @media (max-width:750px) {
     #main-text-offer-div {
-        margin-top: 0px;
+        margin-top: 120px;
     }
 
     #offer-text {
-        padding-bottom: 50px;
+        padding-bottom: 10px;
     }
 }
 
@@ -447,10 +493,28 @@ pre {
     width: 200px;
 }
 
+.expertise-panel .skill-icon {
+    margin-top: 20px;
+}
+
 #projectsDiv {
     padding-top: 25px;
 }
 
+#offerDiv .btn-primary {
+    background: #6997F1;
+    border-color: #6997F1;
+}
+
+.btn-light {
+    border-color: #d9d9d9;
+}
+
+#offerDiv .btn-primary:hover,
+#offerDiv .btn-primary:focus,
+#offerDiv .btn-primary:active {
+    background: #34508e;
+}
 
 .project-more-info-button {
     margin: 20px 0px;
@@ -566,20 +630,31 @@ footer a:focus {
 
 .project-tools-div,
 .project-tools-p {
-    margin: 20px 0px;
+    margin: 35px 0px 5px;
 }
 
 .project-responsive-img {
-    margin: 40px auto;
+    margin: 40px auto 10px;
 }
 
 .project-supporting-text-div {
-    padding-top: 10px;
+    padding: 10px;
+    background: white;
 }
+
+
 
 .project-design-img {
     margin-top: 25px;
     margin-bottom: 25px;
+}
+
+.project-description-div>.row {
+    padding-top: 35px;
+}
+
+.project-description-div>.row .col-sm-3 h3 {
+    margin-top: 35px;
 }
 
 .project-description-div h3 {
@@ -590,6 +665,7 @@ footer a:focus {
 
 .project-description-div h4 {
     text-align: left;
+    padding-top: 0;
 }
 
 .dev-vs-design-div {
@@ -598,7 +674,11 @@ footer a:focus {
 
 }
 
-.dev-vs-design-div p.center-block {
+.project-supporting-text-div .projectsDiv-panel {
+    margin-top: 25px;
+}
+
+.dev-vs-design-div p.mx-auto {
     margin-top: 20px;
 }
 
@@ -651,9 +731,11 @@ footer a:focus {
 .process em:target::before {
     content: "";
     display: block;
-    height: 80px; /* fixed header height*/
-    margin: -80px 0 0; /* negative fixed header height */
-  }
+    height: 80px;
+    /* fixed header height*/
+    margin: -80px 0 0;
+    /* negative fixed header height */
+}
 
 .process p {
     margin-left: 10px;
@@ -662,7 +744,7 @@ footer a:focus {
 
 .process h3 {
     margin-top: 45px;
-    font-size: 2.6rem;
+    font-size: 26px;
 }
 
 .process h3:first-child {
@@ -695,10 +777,10 @@ footer a:focus {
     padding: 8px 15px;
 
 }
+
 .process.mainBodyContent ul.nav li .nav a:active,
 .process.mainBodyContent ul.nav li .nav a.active {
     background: #efefef
-
 }
 
 /* affix, accordion, and scrollspy styles */
@@ -716,10 +798,16 @@ footer a:focus {
     flex: 1;
 }
 
+.affix-container .navbar {
+    align-items: flex-start;
+}
+
 
 #affix-sidebar-scrollspy {
     padding: 10px;
 }
+
+
 
 .navbar.affix {
     position: fixed;
@@ -738,20 +826,22 @@ footer a:focus {
     width: 100%;
 }
 
-.panel-default {
+.card-default {
     border: 0;
+    margin-bottom: 10px;
 }
 
-.panel-default .panel-heading {
+.card-default .card-header {
     background: #776A6A;
     color: white;
 }
 
-.panel-default .panel-heading:hover,
-.panel-default .panel-heading:focus,
-.panel-default .panel-heading:active,
-.panel-default .panel-heading:visited {
+.card-default .card-header:hover,
+.card-default .card-header:focus,
+.card-default .card-header:active,
+.card-default .card-header:visited {
     color: #776A6A;
+    background: #efefef;
 
 }
 

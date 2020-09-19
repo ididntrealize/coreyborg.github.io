@@ -3,7 +3,7 @@
 	/*align menu items right above hamburger size */
 		var docWidth = $(document).width();
 		if(docWidth>750){
-			$("#navbar ul").addClass("pull-right");
+			$("#navbar ul").addClass("float-right");
 		}
 	
 	/* initiate home page
@@ -40,9 +40,9 @@
 	//realign thumbs on xs 
 		var containerWidth= $(".container").width();
 		if (containerWidth<=750){
-			$(".site-thumb").removeClass("pull-right");
-			$(".site-thumb").addClass("center-block");
-			$(".skill-icon").addClass("center-block");
+			$(".site-thumb").removeClass("float-right");
+			$(".site-thumb").addClass("mx-auto");
+			$(".skill-icon").addClass("mx-auto");
 		}
 	
 	})();
