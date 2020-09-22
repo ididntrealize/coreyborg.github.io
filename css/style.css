@@ -678,6 +678,18 @@ footer a:focus {
     margin-top: 25px;
 }
 
+.project-supporting-text-div .projectsDiv-panel {
+    padding: 0px 10px;
+}
+
+.project-supporting-text-div .projectsDiv-panel .row{
+    padding-bottom: 35px;
+}
+.project-supporting-text-div .projectsDiv-panel:last-child {
+    padding-bottom: 0;
+}
+
+
 .dev-vs-design-div p.mx-auto {
     margin-top: 20px;
 }
@@ -717,6 +729,10 @@ footer a:focus {
 
 
 
+}
+
+.clickable-image{
+    cursor: pointer;
 }
 
 

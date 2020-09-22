@@ -30,22 +30,22 @@ function changeToPage(pageName) {
             window.history.pushState({path: newurl}, '', newurl);
         }
 
-        setTimeout(function () {
-            /*check if scroll necessary */
-            if (pageName.includes("#")) {
-                scrollToLocation = "#" + pageName.split("#")[1];
-            }
+        // setTimeout(function () {
+        //     /*check if scroll necessary */
+        //     if (pageName.includes("#")) {
+        //         scrollToLocation = "#" + pageName.split("#")[1];
+        //     }
 
-            let userPosition = $('html, body').scrollTop();
-            let pageTop = $(scrollToLocation).offset().top - navBarHeight;
-            let animationSpeed = userPosition > 1400 ? 1400 : 666;
+        //     let userPosition = $('html, body').scrollTop();
+        //     let pageTop = $(scrollToLocation).offset().top - navBarHeight;
+        //     let animationSpeed = userPosition > 1400 ? 1400 : 666;
 
-            if(userPosition !== pageTop){
-                $('html, body').animate({
-                    scrollTop: $(scrollToLocation).offset().top - navBarHeight
-                }, animationSpeed);
-            }
-        }, 200);
+        //     if(userPosition !== pageTop){
+        //         $('html, body').animate({
+        //             scrollTop: $(scrollToLocation).offset().top - navBarHeight
+        //         }, animationSpeed);
+        //     }
+        // }, 200);
 
     });
 
@@ -56,13 +56,24 @@ function changeToPage(pageName) {
 
 }
 
-//on page load set page from query string
-$( document ).ready(function() {
+function goToQueryString() {
     var searchParams = new URLSearchParams(window.location.search);
     if( searchParams.get("page") ) {
         changeToPage( searchParams.get("page") )
+    } else {
+        changeToPage( 'portfolio.html' );
     }
+}
 
+window.addEventListener('popstate', function(event) {
+    // Can access state data using event.state.data
+    goToQueryString();
+});
+
+
+//on page load set page from query string
+$( document ).ready(function() {
+    goToQueryString();
 
     
 });
