@@ -1,58 +1,49 @@
 <article data-spy="scroll" data-target="#affix-sidebar-scrollspy" data-offset="70" class="mainBodyContent process">
 
-    <div id="intro-content" class="row border-divider-top" style="padding:35px 0px; margin-top:0px;">
+    <div id="intro-content">
 
-        <div class="row">
+        <div class="container-fluid killPadding">
+            <div class="mainBodyContent">
+                <div class="row" style="padding:0px 0px 35px 0px; margin-top:0px;">
+                    <div class="col-sm-10 offset-sm-1">
+                        <div class="row">
+                            <div class="col-lg-7 col-md-8 order-md-2 d-flex" style="z-index: 10;">
+                                <div class="text-panel about-panel">
 
-            <h2 class="center-text w-100">Web Design Process</h2>
+                                    <h3>
+                                        Web Design Process
+                                    </h3>
 
-            <div class="col-sm-10 offset-sm-1">
-                <div class="row">
-                    <div class="col-md-6 order-md-1">
-                        <div class="text-panel">
+                                    <p>
+                                        <em style="margin-top: 0;">Building a website can be overwhelming! </em>
+                                        An ever changing digital marketplace and the amount of different skills needed to create
+                                        a
+                                        website
+                                        would be daunting without a knowledgable and supportive community.
+                                        So let me help you get started!
 
-                            <h3>
-                                Building a Web Presence
-                            </h3>
+                                    </p>
 
-                            <p class="">
-                                <em>Starting from scratch, building a website is overwhelming! </em>
-                                An ever changing digital marketplace and the amount of different skills needed to create
-                                a
-                                website
-                                would be daunting without a knowledgable and supportive community.
-                                So let me help you get started!
+                                </div>
 
-                            </p>
 
+                            </div>
+                            <div class="col-lg-5 col-md-4 order-md-1">
+                                <div class="d-flex mx-auto image-container">
+                                    <img alt="Coreyborg coding on a couch with custom cloud laptop artwork"
+                                        class="d-block mx-auto"
+                                        src="images/corey-couch-cloud.jpg"
+                                        style="border-radius:10px;" />
+
+                                </div>
+                            </div>
                         </div>
-
-
-
-
-                    </div>
-                    <div class="col-md-6 order-md-0" style="padding-top:20px;">
-
-                        <div class="mx-auto">
-                            <img alt="Coreyborg coding through frustration on a couch with custom cloud laptop artwork"
-                                class="img-fluid mx-auto" src="images/corey-couch-cloud.jpg"
-                                style="border-radius:15px;" />
-
-                        </div>
-                        <div class="center-text">
-                            <!--h2 style="font-size:40px;">Corey Boiko</h2-->
-                            <!--p>Designer and Developer</p-->
-                        </div>
-
                     </div>
                 </div>
-
-
             </div>
         </div>
-
-
     </div>
+
     <div id="content" class="row border-divider-top" style="padding: 35px 0px;">
         <h2 class="text-center w-100">Websites in a Nutshell </h2>
 
@@ -710,63 +701,6 @@
         </div><!-- /end #affix-and-content -->
     </div>
 
-    <div id="cta" class="row border-divider-top" style="padding:35px 0px">
-        <div class="col-sm-10 offset-sm-1">
-            <h2 class="center-text">
-                DIY with a little help
-            </h2>
-            <div class="row">
-                <div class="col-md-6" style="padding-top:50px;">
-                    <img alt="Coreyborg feeling successful" class="img-fluid mx-auto" src="images/profile-mountains.jpg"
-                        style="border-radius:15px;" />
-
-                </div>
-                <div class="col-md-6">
-                    <div class="text-panel about-panel">
-
-
-
-
-                        <p class="">
-                            <em>In order for your site to succeed, the web design process can span months and cost
-                                thousands of dollars!</em>
-                            For that reason, many people decide to try to tackle the task on their own.
-                            However, without the proper tools and knowledge of web technologies, your site is not likely
-                            to be profitable.
-                        </p>
-
-
-                    </div>
-                    <ul>
-
-                        <li>
-                            <a onclick="switchPage.call(this, event);" href="experience.html"
-                                class="internal-link center-text">
-                                <button type="button" class="btn btn-block btn-light btn-lg mx-auto">
-                                    <i class="fas fa-1x fa-briefcase"></i>
-                                    &nbsp;Professional Experience
-                                </button>
-                            </a>
-                        </li>
-                        <li>
-                            <a onclick="switchPage.call(this, event);" href="portfolio.html"
-                                class="internal-link center-text">
-                                <button type="button" class="btn btn-block btn-light btn-lg mx-auto">
-                                    <i class="fas fa-1x fa-code"></i>
-                                    &nbsp;Website portfolio
-                                </button>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-
-            </div>
-
-
-        </div>
-    </div>
-
 </article>
 
 <script type="text/javascript">
@@ -799,8 +733,8 @@
 
     //side menu affixes only during main content block
     let navbarHeight = 62;
-    let scrollStopTop = $('#affix-and-content').offset().top - navbarHeight;
-    let scrollStopBottom = $('#cta').offset().top - $('#cta').height();
+    let scrollStopTop = $('#affix-and-content').offset().top + navbarHeight;
+    let scrollStopBottom = $('#final-cta').offset().top - $('#final-cta').height();
 
     function openAccordionPanel() {
         for (let i = 0; i < panels.length; i++) {

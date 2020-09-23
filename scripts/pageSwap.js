@@ -3,7 +3,7 @@ function switchPage(event) {
     event.preventDefault();
 
     var linkLocation = $(this).attr("href");
-    changeToPage(linkLocation);
+    changeToPage(linkLocation, true);
 
     //if dropdown toggle is visible, hide menu on click
     if ($('.navbar-toggle').css('display') != 'none') {
@@ -13,11 +13,11 @@ function switchPage(event) {
 
 }
 
-function changeToPage(pageName) {
+function changeToPage(pageName, scrollToPage) {
 
     var pageExtension = "page/" + pageName;
     var scrollToLocation = "#mainBodyContainer";
-    var navBarHeight = 62;
+    var navBarHeight = 68;
 
     $("#mainBodyContainer").load(pageExtension, function () {
 
@@ -30,22 +30,24 @@ function changeToPage(pageName) {
             window.history.pushState({path: newurl}, '', newurl);
         }
 
-        setTimeout(function () {
-            /*check if scroll necessary */
-            if (pageName.includes("#")) {
-                scrollToLocation = "#" + pageName.split("#")[1];
-            }
+        if (scrollToPage) {
+            setTimeout(function () {
+                /*check if scroll necessary */
+                if (pageName.includes("#")) {
+                    scrollToLocation = "#" + pageName.split("#")[1];
+                }
 
-            let userPosition = $('html, body').scrollTop();
-            let pageTop = $(scrollToLocation).offset().top - navBarHeight;
-            let animationSpeed = userPosition > 1400 ? 1400 : 666;
+                let userPosition = $('html, body').scrollTop();
+                let pageTop = $(scrollToLocation).offset().top - navBarHeight;
+                let animationSpeed = userPosition > 1400 ? 1400 : 666;
 
-            if(userPosition !== pageTop){
-                $('html, body').animate({
-                    scrollTop: $(scrollToLocation).offset().top - navBarHeight
-                }, animationSpeed);
-            }
-        }, 200);
+                if(userPosition !== pageTop){
+                    $('html, body').animate({
+                        scrollTop: $(scrollToLocation).offset().top - navBarHeight
+                    }, animationSpeed);
+                }
+            }, 200);
+        }
 
     });
 
@@ -59,9 +61,9 @@ function changeToPage(pageName) {
 function goToQueryString() {
     var searchParams = new URLSearchParams(window.location.search);
     if( searchParams.get("page") ) {
-        changeToPage( searchParams.get("page") )
+        changeToPage( searchParams.get("page"), true )
     } else {
-        changeToPage( 'portfolio.html' );
+        changeToPage( 'portfolio.html', false );
     }
 }
 

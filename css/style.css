@@ -396,6 +396,8 @@ pre {
     float: left;
 }
 
+
+
 .carousel-inner {
     background: white;
 }
@@ -436,6 +438,12 @@ pre {
     font-family: 'Noto Sans', sans-serif;
 }
 
+#offer-text-supporting {
+    padding: 0px 10px 15px 10px;
+    font-size: 22px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
 #customText {
     font-style: italic;
     color: #776A6A;
@@ -468,7 +476,8 @@ pre {
 
 #main-text-offer-div {
     margin-top: 150px;
-    background: rgba(255, 255, 255, .5);
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 39%, rgba(255,255,255,0) 100%);
     padding: 0px;
 
 }
@@ -534,11 +543,6 @@ pre {
     clear: both;
 }
 
-.about-panel {
-
-    border: none;
-}
-
 .text-panel p {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -572,6 +576,23 @@ pre {
     max-width: 35%;
 }
 
+#intro-content {
+    background-color: white;
+
+}
+
+#intro-content p{
+    margin-left: 0;
+
+}
+
+.row .d-flex {
+    align-items: flex-end;
+}
+.row .d-flex.image-container {
+    justify-content: center;
+}
+
 #aboutDiv {
     padding: 15px;
 }
@@ -581,11 +602,27 @@ pre {
     margin: 20px;
 }
 
+
+.about-panel {
+
+    border: none;
+}
+
+.about-panel p{
+    margin: 0;
+}
+
+
 @media (min-width:750px) {
     .about-panel {
 
-        margin-top: 65px;
+        margin-bottom: 20px;
     }
+
+    .row .d-flex.image-container {
+        justify-content: flex-start;
+    }
+    
 
     #offer-text {
         font-weight: bold;
