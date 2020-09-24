@@ -76,11 +76,8 @@ window.addEventListener('popstate', function(e) {
     currentUrl = currentUrl.includes('#') ? currentUrl.split('#')[0] : currentUrl;
 
     if(currentUrl !== targetUrl.split('#')[0]) {
-
         goToQueryString();
     }
-    console.log(currentUrl)
-    console.log('targetUrl.split(#)[0] : ', targetUrl.split('#')[0]);
     
 });
 
