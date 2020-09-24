@@ -423,15 +423,7 @@ pre {
     padding-bottom: 0px;
 }
 
-/*FOR OUTRAGEOUSLY LARGE SCREENS*/
-@media(min-width:1000px) {
-    #offerDiv {
-        padding-top: 130px;
-    }
-    .about-panel {
-        max-width: 600px;
-    }
-}
+
 
 #offer-text {
     padding-left: 10px;
@@ -472,12 +464,14 @@ pre {
     }
 }
 
+
+
 .fa-check-square-o {
     color: green;
 }
 
 #main-text-offer-div {
-    margin-top: 150px;
+    margin-top: 130px;
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 39%, rgba(255,255,255,0) 100%);
     padding: 0px;
@@ -492,6 +486,24 @@ pre {
     #offer-text {
         padding-bottom: 10px;
     }
+}
+
+/*FOR OUTRAGEOUSLY LARGE SCREENS*/
+@media(min-width:1500px) {
+    #main-text-offer-div {
+        padding-top: 50px;
+    }
+
+    .about-panel {
+        max-width: 600px;
+    }
+}
+
+@media(min-width:2000px) {
+    #main-text-offer-div {
+        padding-top: 150px;
+    }
+
 }
 
 .check-mark-text {
