@@ -1,9 +1,6 @@
 $(function() {
     // Get the form.
-    var form = $('#ajax-contact');
-
-    // Get the messages div.
-    var formMessages = $('#form-messages');
+    var form = $('#ajax-contact');;
 
    //toggle error messages
 	$(".errorDiv").toggle();
@@ -28,7 +25,7 @@ $(function() {
 			message= $("#message").val();
 		
 		//Error handling
-		if(name==""){
+		if(name == "" || name.length > 1000){
 			$("#nameErrorDiv").show();
 			erroredName=true;
 		}else{
@@ -56,42 +53,41 @@ $(function() {
 		}
 		
 		if(!erroredEmail && !erroredName && !erroredMessage){
+            const form = document.querySelector('form');
+
+            const data = {};
+            const formElements = Array.from(form);
+            formElements.map(input => (data[input.name] = input.value));
+
+            
+            console.log("form data: ", data)
+            console.log("json string for data: ", JSON.stringify(data))
+
+            // Construct an HTTP request
+            var xhr = new XMLHttpRequest();
+            xhr.open(form.method, form.action, true);
+            xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
+            xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+            // Send the collected data as JSON
+            xhr.send(JSON.stringify(data));
+
+            // Callback function
+            xhr.onloadend = response => {
+            if (response.target.status === 200) {
+                // The form submission was successful
+                form.reset();
+                $('#form-messages').addClass('success')
+                $('#form-messages').html('Thanks you much, email sent!');
+                $('#form-messages').toggle();
+            } else {
+                // The form submission failed
+                $('#form-messages').html('Something went wrong!');
+                console.error(JSON.parse(response.target.response).message);
+            }
+            };
 			
-			// Serialize the form data.
-			var formData = $(form).serialize();
-			
-			// Submit the form using AJAX.
-			$.ajax({
-				type: 'POST',
-				url: $(form).attr('action'),
-				data: formData
-			})
-			.done(function(response) {
-				// Make sure that the formMessages div has the 'success' class.
-				$(formMessages).removeClass('bg-error');
-				$(formMessages).addClass('bg-success');
-
-				// Set the message text.
-				$(formMessages).text(response);
-
-				// Clear the form.
-				$('#name').val('');
-				$('#email').val('');
-				$('#message').val('');
-			})
-			.fail(function(data) {
-				// Make sure that the formMessages div has the 'error' class.
-				$(formMessages).removeClass('bg-success');
-				$(formMessages).addClass('bg-error');
-
-				// Set the message text.
-				if (data.responseText !== '') {
-					$(formMessages).text(data.responseText);
-				} else {
-					$(formMessages).text('Oops! An error occured and your message could not be sent.');
-				}
-			});
-		}
+	 }
 		
 	});
    

@@ -262,8 +262,8 @@
 
                             <a onclick="switchPage.call(this, event);" href="process.html"
                                 class="internal-link center-text btn btn-primary btn-lg">
-                                    <i class="fas fa-1x fa-pencil-alt"></i>
-                                    &nbsp;My Web Process
+                                <i class="fas fa-1x fa-pencil-alt"></i>
+                                &nbsp;My Web Process
                             </a>
                         </div>
                         <!-- <span class="hidden-sm"><br /></span>
@@ -315,9 +315,9 @@
 
                                                         </em>
                                                         Getting your ideas out to the right people isn't as easy as just
-                                            having good ideas.
-                                            Luckily, you have me to help you through the roadblocks!
-                                            Why should you worry about anything other than the big picture?
+                                                        having good ideas.
+                                                        Luckily, you have me to help you through the roadblocks!
+                                                        Why should you worry about anything other than the big picture?
 
                                                     </p>
 
@@ -345,7 +345,8 @@
                     <!-- CAROUSEL AND PORTFOLIO AREA-->
                     <div class="row border-divider-top" style="padding:0px 0px 35px 0px">
                         <div id="projectsSection" class="container-fluid killPadding">
-                            <div id="MainCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+                            <div id="MainCarousel" class="carousel slide carousel-fade" data-ride="carousel"
+                                data-interval="false">
 
 
                                 <div class="carousel-inner" role="listbox" style="padding-bottom: 30px;">
@@ -1325,6 +1326,9 @@
                             <h2 class="center-text" style="padding-bottom:0px;">Get in touch</h2>
 
                         </div>
+                    </div>
+                    <div class="row">
+
                         <div class="col-12 col-sm-8 offset-sm-2">
 
                             <div class="ISAIDTHANKYOU">
@@ -1346,101 +1350,157 @@
                             <div id="form-messages">
                             </div>
 
-                            <!-- <form id="ajax-contact" class="form-horizontal" role="form" method="POST" action="scripts/mailer.php">
-								<div class="form-group">
-									<label for="name" class="col-sm-2 control-label">Name</label>
-									<div class="col-sm-10">
-										<input type="text" class="form-control" id="name" name="name" placeholder="Your First & Last Name" value="">
 
 
-										<div id="nameErrorDiv" class="errorDiv">
-											<p class='text-danger'>What should I call you?</p>
-										</div>
-
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="email" class="col-sm-2 control-label">Email</label>
-									<div class="col-sm-10">
-										<input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+                            <form id="ajax-contact" class="form-horizontal" role="form" method="POST"
+                                action="https://i75s40dj83.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer">
+                                <div class="form-group row">
+                                    <label for="name" class="col-sm-2 control-label">Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="name" name="name"
+                                            placeholder="Your First & Last Name" value="">
 
 
-										<div id="emailErrorDiv" class="errorDiv">
-											<p class='text-danger'>Please enter a valid Email Address.</p>
-										</div>
+                                        <div id="nameErrorDiv" class="errorDiv">
+                                            <p class='text-danger'>What should I call you?</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="email" class="col-sm-2 control-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="example@domain.com" value="">
 
 
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label for="message" class="col-sm-2 control-label">Message</label>
-									<div class="col-sm-10">
-										<textarea id="message" class="form-control" rows="4" name="message"></textarea>
+                                        <div id="emailErrorDiv" class="errorDiv">
+                                            <p class='text-danger'>Please enter a valid Email Address.</p>
+                                        </div>
 
 
-										<div id="messageErrorDiv" class="errorDiv">
-											<p class='text-danger'>Please enter a message!</p>
-										</div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="form-group row">
+                                    <p>Comfort level with the following topics (relating to your business)</p>
+
+                                    <div class="input-group">
+                                        <label for="email" class="control-label">Persuasive writing</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio1" value="option1">
+                                            <label class="form-check-label" for="inlineRadio1">1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio2" value="option2">
+                                            <label class="form-check-label" for="inlineRadio2">2</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio3" value="option3" disabled>
+                                            <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="email" class="control-label">Creating/editing images</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio1" value="option1">
+                                            <label class="form-check-label" for="inlineRadio1">1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio2" value="option2">
+                                            <label class="form-check-label" for="inlineRadio2">2</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio3" value="option3" disabled>
+                                            <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="email" class="control-label">Using Website Builders</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio1" value="option1">
+                                            <label class="form-check-label" for="inlineRadio1">1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio2" value="option2">
+                                            <label class="form-check-label" for="inlineRadio2">2</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio3" value="option3" disabled>
+                                            <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                                        </div>
+                                    </div>
+
+                                </div> -->
+
+                                <div class="form-group row">
+                                    <label for="message" class="col-sm-2 control-label">Additional Information</label>
+                                    <div class="col-sm-10">
+                                        <textarea id="message" class="form-control" rows="4" name="message"></textarea>
 
 
-									</div>
-								</div>
-								
-								<div class="col-10 offset-xs-1 col-sm-6 offset-sm-0">
-									<div class="form-group" style="margin:20px 0px;" >
-									
-										<div class="g-recaptcha" data-sitekey="6LfIE4oUAAAAAL1v40Qi4VQRo00i2-M-rDyv78M9" style="float:right;"></div>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group" style="margin:20px 0px;" >
-									
-										<input id="submit" name="submit" type="submit" value="Send" class="btn btn-block btn-lg btn-primary" style="height:78px; font-size: 1.7em;">
-									</div>
-								</div>	
-							</form> -->
+                                        <div id="messageErrorDiv" class="errorDiv">
+                                            <p class='text-danger'>Please enter a message!</p>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-10 offset-xs-1 col-sm-6 offset-sm-0">
+                                    <div class="form-group" style="margin:20px 0px;">
+
+                                        <div class="g-recaptcha" data-sitekey="6LfIE4oUAAAAAL1v40Qi4VQRo00i2-M-rDyv78M9"
+                                            style="float:right;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 offset-sm-6">
+                                    <div class="form-group" style="margin:20px 0px;">
+
+                                        <input id="submit" name="submit" type="submit" value="Send"
+                                            class="btn btn-block btn-primary" style="height:48px; font-size: 1.5em;">
+                                    </div>
+                                </div>
+                            </form>
 
 
                         </div>
-                        <!-- div class="col-sm-8 offset-sm-2">
-									<div class="text-panel">
-										<p style="margin:10px;">
-										As well as customizing your site from the ground up, I can also take care of taking care of domain acquisition, hosting, and content creation.
-										As a freelance web developer, I am always looking for more work.
-										Send me a message with a short description of your project, 
-										and I will send you back a free consultation and quote.
-										
-										</p>
-									
-										
-									</div>
-								</div -->
                     </div>
 
-
                 </div>
-                <!-- /.container -->
+
+
+            </div>
+            <!-- /.container -->
 
 
 
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container killPadding">
+            <div class="row">
+                <div class="col-sm-8 offset-sm-2">
+                    <p class="float-right"><a class="toTopButton" href="#">Back to top&nbsp;<span
+                                class="glyphicon glyphicon-chevron-up"></span></a></p>
+                    <p>&copy; 2020 Corey Boiko</p>
+                </div>
             </div>
         </div>
 
-
-        <!-- FOOTER -->
-        <footer>
-            <div class="container killPadding">
-                <div class="row">
-                    <div class="col-sm-8 offset-sm-2">
-                        <p class="float-right"><a class="toTopButton" href="#">Back to top&nbsp;<span
-                                    class="glyphicon glyphicon-chevron-up"></span></a></p>
-                        <p>&copy; 2020 Corey Boiko</p>
-                    </div>
-                </div>
-            </div>
-
-        </footer>
+    </footer>
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
