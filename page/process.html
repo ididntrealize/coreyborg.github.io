@@ -705,8 +705,15 @@
 </article>
 
 <script type="text/javascript">
+    //side menu affixes only during main content block
+    let navbarHeight = 105;
+    let scrollStopTop = $('#affix-and-content').offset().top + navbarHeight;
+    let scrollStopBottom = $('#final-cta').offset().top - $('#final-cta').height();
+
+
     $('body').scrollspy({
-        target: '#affix-sidebar-scrollspy'
+        target: '#affix-sidebar-scrollspy',
+        offset: navbarHeight
     })
 
 
@@ -732,10 +739,6 @@
 
 
 
-    //side menu affixes only during main content block
-    let navbarHeight = 62;
-    let scrollStopTop = $('#affix-and-content').offset().top + navbarHeight;
-    let scrollStopBottom = $('#final-cta').offset().top - $('#final-cta').height();
 
     function openAccordionPanel() {
         for (let i = 0; i < panels.length; i++) {
