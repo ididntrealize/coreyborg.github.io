@@ -30,6 +30,8 @@ function changeToPage(pageName, scrollToPage) {
             //window.location.search = searchParams.toString();\
             var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + searchParams.toString();
             window.history.pushState({path: newurl}, '', newurl);
+            
+            currentUrl = newurl;
         }
 
         if (scrollToPage) {
@@ -58,7 +60,6 @@ function changeToPage(pageName, scrollToPage) {
 
     $("title").html(pageTitleCapitilized + " - CoreyBorg Web Development");
 
-    currentUrl = window.location.href;
 
 }
 
@@ -73,9 +74,8 @@ function goToQueryString() {
 
 window.addEventListener('popstate', function(e) {
     let targetUrl = window.location.href;
-    currentUrl = currentUrl.includes('#') ? currentUrl.split('#')[0] : currentUrl;
 
-    if(currentUrl !== targetUrl.split('#')[0]) {
+    if(currentUrl.split('#')[0] !== targetUrl.split('#')[0]) {
         goToQueryString();
     }
     

@@ -424,9 +424,12 @@ pre {
 }
 
 /*FOR OUTRAGEOUSLY LARGE SCREENS*/
-@media(min-width:2000px) {
+@media(min-width:1000px) {
     #offerDiv {
-        background-size: initial;
+        padding-top: 130px;
+    }
+    .about-panel {
+        max-width: 600px;
     }
 }
 
