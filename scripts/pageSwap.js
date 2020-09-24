@@ -1,3 +1,5 @@
+let currentUrl = window.location.href;
+
 /* Page load function */
 function switchPage(event) {
     event.preventDefault();
@@ -56,6 +58,8 @@ function changeToPage(pageName, scrollToPage) {
 
     $("title").html(pageTitleCapitilized + " - CoreyBorg Web Development");
 
+    currentUrl = window.location.href;
+
 }
 
 function goToQueryString() {
@@ -67,9 +71,17 @@ function goToQueryString() {
     }
 }
 
-window.addEventListener('popstate', function(event) {
-    // Can access state data using event.state.data
-    goToQueryString();
+window.addEventListener('popstate', function(e) {
+    let targetUrl = window.location.href;
+    currentUrl = currentUrl.contains('#') ? currentUrl.split('#')[0] : currentUrl;
+
+    if(currentUrl !== targetUrl.split('#')[0]) {
+
+        goToQueryString();
+    }
+    console.log(currentUrl)
+    console.log('targetUrl.split(#)[0] : ', targetUrl.split('#')[0]);
+    
 });
 
 
