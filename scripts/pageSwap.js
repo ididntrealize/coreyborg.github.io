@@ -66,9 +66,14 @@ function changeToPage(pageName, scrollToPage) {
 function goToQueryString() {
     var searchParams = new URLSearchParams(window.location.search);
     if( searchParams.get("page") ) {
-        changeToPage( searchParams.get("page"), true )
+        var newPageName = searchParams.get("page");
+        if (window.location.href.includes("#")) {
+            newPageName += "#" + window.location.href.split("#")[1];
+        }
+
+        changeToPage( newPageName, true )
     } else {
-        changeToPage( 'portfolio.html', false );
+        changeToPage( 'home.html', false );
     }
 }
 
