@@ -551,7 +551,7 @@
                         </div>
                         <div class="container">
                             <div class="row">
-                                <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1">
+                                <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1 killPadding">
 
 
 
@@ -1260,7 +1260,7 @@
         <div class="container subtle-background">
 
             <div class="row" style="padding:65px 0px 35px 0px">
-                <div class="col-sm-10 offset-sm-1">
+                <div class="col-sm-10 offset-sm-1 killPadding">
                     
                     <div class="row">
                         <div class="col-md-6" style="padding-top:20px;">
@@ -1324,7 +1324,7 @@
     <div class="container-fluid subtle-background killPadding">
         <div id="contactSection" class="mainBodyContent container">
             <div class="row">
-                <div class="col-sm-10 offset-sm-1">
+                <div class="col-sm-10 offset-sm-1 killPadding">
 
                     <div class="row">
                         <div class="col-sm-10 offset-sm-1">
@@ -1361,10 +1361,12 @@
                             <form id="ajax-contact" class="form-horizontal" role="form" method="POST"
                                 action="https://i75s40dj83.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer">
                                 <div class="form-group row">
-                                    <label for="name" class="col-sm-2 control-label">Name</label>
-                                    <div class="col-sm-10">
+                                    <h3><label for="name" class="control-label required">Name</label></h3>
+                                    
+                                    <div class="col-12">
+                                        
                                         <input type="text" class="form-control" id="name" name="name"
-                                            placeholder="Your First & Last Name" value="">
+                                            placeholder="Your First & Last Name" value="" required>
 
 
                                         <div id="nameErrorDiv" class="errorDiv">
@@ -1374,10 +1376,11 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="email" class="col-sm-2 control-label">Email</label>
-                                    <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="email" name="email"
-                                            placeholder="example@domain.com" value="">
+                                    <h3><label for="email" class="control-label required">Email</label></h3>
+                                        
+                                    <div class="col-12">
+                                       <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="example@domain.com" value="" required>
 
 
                                         <div id="emailErrorDiv" class="errorDiv">
@@ -1388,69 +1391,197 @@
                                     </div>
                                 </div>
 
-                                <!-- <div class="form-group row">
-                                    <p>Comfort level with the following topics (relating to your business)</p>
+                                <div class="form-group row">
+                                    <h3>Desired Services</h3>
+                                    <div class="col-12">
+                                        
 
-                                    <div class="input-group">
-                                        <label for="email" class="control-label">Persuasive writing</label>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio1" value="option1">
-                                            <label class="form-check-label" for="inlineRadio1">1</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="seviceRequestRadios"
+                                                id="seviceRequestRadios1" value="free consult">
+                                            <label class="form-check-label" for="seviceRequestRadios1">
+                                                A free 20 minute consultation
+                                            </label>
                                         </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio2" value="option2">
-                                            <label class="form-check-label" for="inlineRadio2">2</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="seviceRequestRadios"
+                                                id="seviceRequestRadios2" value="full site">
+                                            <label class="form-check-label" for="seviceRequestRadios2">
+                                                A Full site built
+                                            </label>
                                         </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio3" value="option3" disabled>
-                                            <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="seviceRequestRadios"
+                                                id="seviceRequestRadios3" value="update site" >
+                                            <label class="form-check-label" for="seviceRequestRadios3">
+                                                Updates to an existing site
+                                            </label>
                                         </div>
-                                    </div>
-                                    <div class="input-group">
-                                        <label for="email" class="control-label">Creating/editing images</label>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio1" value="option1">
-                                            <label class="form-check-label" for="inlineRadio1">1</label>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" name="seviceRequestRadios"
+                                                id="seviceRequestRadios4" value="nudge nudge" checked>
+                                            <label class="form-check-label" for="seviceRequestRadios4">
+                                                A nudge in the right direction every now and then
+                                            </label>
                                         </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio2" value="option2">
-                                            <label class="form-check-label" for="inlineRadio2">2</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio3" value="option3" disabled>
-                                            <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                        <label for="email" class="control-label">Using Website Builders</label>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio1" value="option1">
-                                            <label class="form-check-label" for="inlineRadio1">1</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio2" value="option2">
-                                            <label class="form-check-label" for="inlineRadio2">2</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio3" value="option3" disabled>
-                                            <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
-                                        </div>
-                                    </div>
 
+                                    </div>
+                                </div>
+
+                                <!-- <div class="form-group row"> 
+                                    <h3>Comfort level with the following topics</h3>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="writing-skill" class="control-label">Persuasive writing</label>
+                                            </div>
+                                            <div id="writing-skill" class="col-6">
+                                                <div class="form-group">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio1" value="option1">
+                                                        <label class="form-check-label" for="inlineRadio1">1</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio2" value="option2">
+                                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio3" value="option3" >
+                                                        <label class="form-check-label" for="inlineRadio3">3</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio4" value="option4" >
+                                                        <label class="form-check-label" for="inlineRadio4">4</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio5" value="option5" >
+                                                        <label class="form-check-label" for="inlineRadio5">5</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="image-skill" class="control-label">Creating/editing images</label>
+                                            </div>
+                                            <div id="image-skill" class="col-6">
+                                                <div class="form-group">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio1" value="option1">
+                                                        <label class="form-check-label" for="inlineRadio1">1</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio2" value="option2">
+                                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio3" value="option3" >
+                                                        <label class="form-check-label" for="inlineRadio3">3</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio4" value="option4" >
+                                                        <label class="form-check-label" for="inlineRadio4">4</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio5" value="option5" >
+                                                        <label class="form-check-label" for="inlineRadio5">5</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="image-skill" class="control-label">Using Website Builders</label>
+                                            </div>
+                                            <div id="image-skill" class="col-6">
+                                                <div class="form-group">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio1" value="option1">
+                                                        <label class="form-check-label" for="inlineRadio1">1</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio2" value="option2">
+                                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio3" value="option3" >
+                                                        <label class="form-check-label" for="inlineRadio3">3</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio4" value="option4" >
+                                                        <label class="form-check-label" for="inlineRadio4">4</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio5" value="option5" >
+                                                        <label class="form-check-label" for="inlineRadio5">5</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="image-skill" class="control-label">Advertising Online</label>
+                                            </div>
+                                            <div id="image-skill" class="col-6">
+                                                <div class="form-group">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio1" value="option1">
+                                                        <label class="form-check-label" for="inlineRadio1">1</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio2" value="option2">
+                                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio3" value="option3" >
+                                                        <label class="form-check-label" for="inlineRadio3">3</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio4" value="option4" >
+                                                        <label class="form-check-label" for="inlineRadio4">4</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                            id="inlineRadio5" value="option5" >
+                                                        <label class="form-check-label" for="inlineRadio5">5</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                        
+                                    </div>
                                 </div> -->
 
                                 <div class="form-group row">
-                                    <label for="message" class="col-sm-2 control-label">Additional Information</label>
-                                    <div class="col-sm-10">
+                                    <h3><label for="message" class="control-label required">Message</label></h3>
+                                    <div class="col-12">
                                         <textarea id="message" class="form-control" rows="4" name="message"></textarea>
 
 
@@ -1509,6 +1640,15 @@
     </footer>
 
     </div>
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
     </script>
@@ -1518,51 +1658,42 @@
     <!-- custom scripts -->
     <script src="scripts/main.js"></script>
     <script src="scripts/app.js"></script>
-    <!--script type="text/javascript">
-	
-	/*SWAP HEADER EVERY VISIT!!! */
-	function randomizeHeaderImage(){
-		//generate random number
-		var siteBackgroundToDisplay = Math.floor(Math.random() * (15) + 1);
-		
-		var bgImageLocationString = 'url("images/main-offer-background' + siteBackgroundToDisplay + '.jpg")'
-		$("#offerDiv").css('background-image', bgImageLocationString);
-		
-		//manage bg positions individually
-		if(siteBackgroundToDisplay == 10 ||siteBackgroundToDisplay == 12 || siteBackgroundToDisplay == 13 || siteBackgroundToDisplay == 14){
-			$("#offerDiv").css('background-position', 'center bottom');
-			
-		}else{
-			$("#offerDiv").css('background-position', 'center 0');
-			
-		}
-	}
-	//randomizeHeaderImage();
+    <script type="text/javascript">
+    
+    var controller = new ScrollMagic.Controller();
+    
+   
 	
 	//detect idle time
 	var idleTime = 0;
-				$(document).ready(function () {
-					//Increment the idle time counter every minute.
-					var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+    $(document).ready(function () {
 
-					//Zero the idle timer on mouse movement.
-					$(this).mousemove(function (e) {
-						idleTime = 0;
-					});
-					$(this).keypress(function (e) {
-						idleTime = 0;
-					});
-				});
+        if(controller) {
+            $('body').addClass('scroll-magic-init');
+        }
 
-				function timerIncrement() {
-					idleTime = idleTime + 1;
-					if (idleTime > 1) { // 2 minutes
-						//randomizeHeaderImage();
-					}
-				}
-					
+        //Increment the idle time counter every minute.
+        var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+
+        //Zero the idle timer on mouse movement.
+        $(this).mousemove(function (e) {
+            idleTime = 0;
+        });
+        $(this).keypress(function (e) {
+            idleTime = 0;
+        });
+
+    });
+
+    function timerIncrement() {
+        idleTime = idleTime + 1;
+        if (idleTime > 1) { // 2 minutes
+            //user is idle
+        }
+    }
+        
 	
-	</script-->
+            </script>
 
 
 

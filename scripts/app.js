@@ -78,7 +78,7 @@ $(function() {
                 // The form submission was successful
                 form.reset();
                 $('#form-messages').addClass('success')
-                $('#form-messages').html('Thanks you much, email sent!');
+                $('#form-messages').html('Thanks much, email sent!');
                 $('#form-messages').toggle();
             } else {
                 // The form submission failed

@@ -80,17 +80,17 @@
                         What better way to show my skill in web design than by designing a website to show my website designs? 
                     </p>
                     <a onclick="switchPage.call(this, event);" href="portfolio.html"
-                            class="internal-link center-text btn btn-primary btn-lg" >
-                            <i class="fas fa-1x fa-pencil-ruler"></i>
-                            &nbsp;Full Site Portfolio
-                        </a>
+                        class="internal-link center-text btn btn-primary btn-lg" >
+                        <i class="fas fa-1x fa-pencil-ruler"></i>
+                        &nbsp;Full Site Portfolio
+                    </a>
 
                 </div>
 
             </div>
             <div class="row">
                 <div id="projectsSection" class="container-fluid killPadding">
-                    <div id="MainCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+                    <div id="MainCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3500" data-pause="hover">
                         <div class="carousel-inner" role="listbox" >
                             <div class="carousel-item active">
                                 <div class="carousel-outer-div">
@@ -398,7 +398,7 @@
         </div>
         <div class="container-fluid" style="padding-top: 30px">
             
-        <div class="container">
+        <div class="container killPadding">
             <div class="row">
                 
                 <div class="col-md-4 projects-col-6 d-flex">
@@ -578,3 +578,111 @@
     </section>
 
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+
+        //Section headers
+        for (var i = 0; i < $("section .section-header").length; i++) { 
+            new ScrollMagic.Scene({
+                    triggerElement: $("section .section-header")[i], 
+                    offset: 150, 
+                    triggerHook: 0.9,
+                })
+                .setClassToggle($("section .section-header")[i], "visible") 
+                // .addIndicators({
+                //     name: "section header " + (i + 1)
+                // }) 
+                .addTo(controller);
+
+        }
+
+        //portfolio section
+        new ScrollMagic.Scene({
+            triggerElement: $("section.portfolio-section .carousel")[0], 
+            offset:220, 
+            triggerHook: 0.9,
+        })
+        .setClassToggle($("section.portfolio-section .carousel")[0], "visible") 
+        .on("start", () => { $('#MainCarousel').carousel(0); })
+        // .addIndicators({
+        //     name: "portfolio section carousel"
+        // }) 
+        .addTo(controller);
+
+
+        new ScrollMagic.Scene({
+            triggerElement: $("section.portfolio-section .project-tools-p")[0], 
+            offset:40, 
+            triggerHook: 0.9,
+        })
+        .setClassToggle($("section.portfolio-section .project-tools-p")[0], "visible") 
+        // .addIndicators({
+        //     name: "portfolio section tools"
+        // }) 
+        .addTo(controller);
+
+
+        new ScrollMagic.Scene({
+            triggerElement: $("section.portfolio-section .dev-vs-design-div")[0], 
+            offset:65, 
+            triggerHook: 0.9,
+        })
+        .setClassToggle($("section.portfolio-section .dev-vs-design-div")[0], "visible") 
+        // .addIndicators({
+        //     name: "portfolio section design vs dev"
+        // }) 
+        .addTo(controller);
+        
+
+        //section CTAs
+        // for (var i = 0; i < $("section .section-header .internal-link").length; i++) { 
+        // new ScrollMagic.Scene({
+        //         triggerElement: $("section .section-header .internal-link")[i], 
+        //         offset:150, 
+        //         triggerHook: 0.9,
+        //     })
+        //     .setClassToggle($("section .section-header .internal-link")[i], "visible") 
+        //     .addIndicators({
+        //         name: "portfolio section header .internal-link" + (i + 1)
+        //     }) 
+        //     .addTo(controller);
+
+        // }
+
+
+
+        //Process section chevrons
+        for (var i = 0; i < $(".chevron-topic").length; i++) { 
+            new ScrollMagic.Scene({
+                    triggerElement: $(".chevron-topic")[i], 
+                    offset: 100*i, 
+                    triggerHook: 0.9,
+                })
+                .setClassToggle($(".chevron-topic")[i], "visible") 
+                // .addIndicators({
+                //     name: "chevron topic " + (i + 1)
+                // })
+                .addTo(controller);
+        }
+
+        //Pricing plans
+        for (var i = 0; i < $(".pricing-section .offer").length; i++) { 
+            new ScrollMagic.Scene({
+                    triggerElement: $(".pricing-section .offer")[i], 
+                    offset: 100 + 100*i, 
+                    triggerHook: 0.9,
+                })
+                .setClassToggle($(".pricing-section .offer")[i], "visible") 
+                // .addIndicators({
+                //     name: "pricing plan " + (i + 1)
+                // })
+                .addTo(controller);
+        }
+
+
+
+
+    });
+</script>
