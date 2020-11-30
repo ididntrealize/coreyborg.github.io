@@ -381,7 +381,7 @@ pre {
 .mainBodyContent {
     background: rgb(255, 255, 255);
     background: linear-gradient(0deg, rgba(255, 255, 255, 0) 79%, rgba(255, 255, 255, 1) 100%);
-    
+
 }
 
 .mainBodyContent section {
@@ -429,22 +429,22 @@ section .section-header {
 }
 
 
-.scroll-magic-init section .section-header > div{
+.scroll-magic-init section .section-header>div {
     position: relative;
     opacity: 0;
-    
-    top: 100px;
-    
 
-		-webkit-transition: all 0.6s ease-out;
-			 -moz-transition: all 0.6s ease-out;
-				-ms-transition: all 0.6s ease-out;
-				 -o-transition: all 0.6s ease-out;
-						transition: all 0.6s ease-out;
+    top: 100px;
+
+
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
 }
 
 
-.scroll-magic-init section .section-header.visible > div{
+.scroll-magic-init section .section-header.visible>div {
     opacity: 1;
     top: 0;
 
@@ -461,30 +461,32 @@ section .section-header .text-panel {
     padding-top: 0;
     margin-top: 0;
 }
+
 section .section-header .internal-link {
     margin-left: 0;
 }
+
 .scroll-magic-init section .section-header .internal-link {
     transform-origin: top left;
     -webkit-transform: none;
-			 -moz-transform: none;
-				-ms-transform: none;
-				 -o-transform: none;
-						transform: none;
-		-webkit-transition: all 1s ease-out;
-			 -moz-transition: all 1s ease-out;
-				-ms-transition: all 1s ease-out;
-				 -o-transition: all 1s ease-out;
-						transition: all 1s ease-out;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
 }
 
 .scroll-magic-init section .section-header .internal-link.visible {
     transform-origin: top left;
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
-       -ms-transform: scale(1.2);
-        -o-transform: scale(1.2);
-               transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
 
 }
 
@@ -497,11 +499,12 @@ section .section-header .internal-link {
 .scroll-magic-init section.portfolio-section .carousel {
     opacity: 0;
     -webkit-transition: all 1s ease-in-out;
-         -moz-transition: all 1s ease-in-out;
-            -ms-transition: all 1s ease-in-out;
-             -o-transition: all 1s ease-in-out;
-                    transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
+
 .scroll-magic-init section.portfolio-section .carousel.visible {
     opacity: 1;
 }
@@ -515,11 +518,12 @@ section.portfolio-section .dev-vs-design-div {
 .scroll-magic-init section.portfolio-section .dev-vs-design-div {
     opacity: 0;
     -webkit-transition: all 2s ease-in-out;
-         -moz-transition: all 2s ease-in-out;
-            -ms-transition: all 2s ease-in-out;
-             -o-transition: all 2s ease-in-out;
-                    transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -ms-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
 }
+
 .scroll-magic-init section.portfolio-section .dev-vs-design-div.visible {
     opacity: 1;
 }
@@ -527,10 +531,10 @@ section.portfolio-section .dev-vs-design-div {
 .scroll-magic-init section.portfolio-section .project-tools-p {
     opacity: 0;
     -webkit-transition: all 2s ease-in-out;
-         -moz-transition: all 2s ease-in-out;
-            -ms-transition: all 2s ease-in-out;
-             -o-transition: all 2s ease-in-out;
-                    transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -ms-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
 }
 
 .scroll-magic-init section.portfolio-section .project-tools-p.visible {
@@ -589,25 +593,25 @@ section.process-section .chevron-topic {
 
 .scroll-magic-init section.process-section .chevron-topic {
     opacity: 0;
-		-webkit-transform: translate(-80px,0);
-			 -moz-transform: translate(-80px,0);
-				-ms-transform: translate(-80px,0);
-				 -o-transform: translate(-80px,0);
-						transform: translate(-80px,0);
-		-webkit-transition: all 0.6s ease-out;
-			 -moz-transition: all 0.6s ease-out;
-				-ms-transition: all 0.6s ease-out;
-				 -o-transition: all 0.6s ease-out;
-						transition: all 0.6s ease-out;
+    -webkit-transform: translate(-80px, 0);
+    -moz-transform: translate(-80px, 0);
+    -ms-transform: translate(-80px, 0);
+    -o-transform: translate(-80px, 0);
+    transform: translate(-80px, 0);
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
 }
 
 .scroll-magic-init section.process-section .chevron-topic.visible {
     opacity: 1;
     -webkit-transform: none;
-			 -moz-transform: none;
-				-ms-transform: none;
-				 -o-transform: none;
-						transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
 }
 
 @media(max-width: 1000px) {
@@ -696,53 +700,87 @@ section.pricing-section .cloud-background {
 
     border-radius: 7px;
 }
-
 .offer:hover {
-    border-color: #5cb85c;
-    /* 
-        -webkit-transform: scale(1.1); 
-        -moz-transform: scale(1.1); 
-        -ms-transform: scale(1.1); 
-        -o-transform: scale(1.1); 
-        transform:rotate scale(1.1); 
-        -webkit-transition: all 0.4s ease-in-out; 
-        -moz-transition: all 0.4s ease-in-out; 
-        -o-transition: all 0.4s ease-in-out;
-        transition: all 0.4s ease-in-out; 
-    */
-    }
+    -webkit-transform: scale(1.05); 
+    -moz-transform: scale(1.05); 
+    -ms-transform: scale(1.05); 
+    -o-transform: scale(1.05); 
+    transform:rotate scale(1.05); 
+    -webkit-transition: all 0.2s ease-in-out; 
+    -moz-transition: all 0.2s ease-in-out; 
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; 
+   
+}
+
+.home .offer {
+    transform: none;
+    transition: none;
+
+}
+
+
 .shape {
     border-color: rgba(255, 255, 255, 0) #d9534f rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
 }
 
-.offer:hover .shape {
-    border-color: transparent #5cb85c transparent transparent;
-    
-}
 
-.offer-success {
+
+.offer-primary {
     border-color: #5cb85c;
 }
-
-.offer-success .shape {
+.offer-primary .shape {
     border-color: transparent #5cb85c transparent transparent;
 }
-
-.offer-default {
-    border-color: #83b9838a;
+.offer-primary:hover .shape {
+    border-color: transparent #5cb85c transparent transparent;
+}
+.offer-primary:hover {
+    border-color: #5cb85c;
+   
 }
 
-.offer-default .shape {
-    border-color: transparent #83b9838a transparent transparent;
+
+.offer-low {
+    border-color: #0098cf7c;
 }
+.offer-low .shape {
+    border-color: transparent #0098cf7c transparent transparent;
+}
+.offer-low:hover .shape {
+    border-color: transparent #0098cf transparent transparent;
+}
+.offer-low:hover {
+    border-color: #0098cf;
+   
+}
+
+.offer-high {
+    border-color: #a3236381;
+}
+.offer-high .shape {
+    border-color: transparent #a3236381 transparent transparent;
+}
+.offer-high:hover .shape {
+    border-color: transparent #a32363 transparent transparent;
+}
+.offer-high:hover {
+    border-color: #a32363;
+   
+}
+
 
 .shape-text {
     color: #fff;
-    font-size: 22px;
+    font-size: 19px;
     font-weight: bold;
     position: relative;
-    right: -50px;
-    top: -4px;
+    right: -80px;
+    top: 12px;
+
+    display: flex;
+    justify-content: center;
+
     white-space: nowrap;
     -ms-transform: rotate(30deg);
     -o-transform: rotate(360deg);
@@ -751,7 +789,7 @@ section.pricing-section .cloud-background {
 }
 
 .offer-content {
-    padding: 0 20px 10px;
+    padding: 60px 20px 10px;
 }
 
 .offer-content .lead {
@@ -764,6 +802,8 @@ section.pricing-section .cloud-background {
     .offer .hover-focus {
         opacity: .3;
     }
+
+    .offer.active .hover-focus,
     .offer:hover .hover-focus,
     .offer:focus .hover-focus,
     .offer:active .hover-focus,
@@ -773,25 +813,33 @@ section.pricing-section .cloud-background {
 }
 
 
-.scroll-magic-init .offer {
+.scroll-magic-init .home .offer {
     opacity: 0;
     -webkit-transition: all 0.6s ease-out;
-         -moz-transition: all 0.6s ease-out;
-            -ms-transition: all 0.6s ease-out;
-             -o-transition: all 0.6s ease-out;
-                    transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
 }
 
-.scroll-magic-init .offer.visible {
+.scroll-magic-init .home .offer.visible {
     opacity: 1;
     animation: bulge 2s;
 }
 
 
 @keyframes bulge {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 
@@ -1061,6 +1109,7 @@ section.pricing-section .cloud-background {
 #form-messages.success {
     background: #7dd57d;
 }
+
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -1069,10 +1118,26 @@ section.pricing-section .cloud-background {
     margin-bottom: 0;
 }
 
-label.required:after{
-    content:" *";
+.form-group input.form-check-input{
+    margin-top: .7rem;
+}
+.form-group label.form-check-label{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.form-group .site-plan input.form-check-input{
+    margin-top: 0;
+}
+.form-group .site-plan label.form-check-label{
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+label.required:after {
+    content: " *";
     color: red;
-  }
+}
 
 footer {
     padding: 15px;

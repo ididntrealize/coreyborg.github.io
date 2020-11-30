@@ -1,6 +1,34 @@
 $(function() {
+
     // Get the form.
-    var form = $('#ajax-contact');;
+    let form = $('#ajax-contact');
+
+    //initial state for Ready to buy signal
+    if( $('input.toggle-site-plan').selected ){
+        $('.site-plan').show();
+    } else {   
+        $('.site-plan').hide();
+    }
+
+    //trigger visibility of plans
+    form.find('input.form-check-input').on('click', (link) => {
+        let inputMatchesClass = $(link.target).hasClass('toggle-site-plan');
+        let inputIsInsideToggle = $('.site-plan').find( $(link.target) ).length > 0;
+
+        if ( inputMatchesClass || inputIsInsideToggle) {
+            $('.site-plan').show();
+        } else {
+            $('.site-plan').hide();
+        }
+
+        if ( inputIsInsideToggle ) {
+            //add true value to any selected .site-plan input (for serializinging in contactform post call)
+            $(link.target).prop('checked') ? $(link.target)[0].value = "true" : $(link.target)[0].value = "false";
+        }
+    });
+
+
+    /* SUBMITTING THE FORM */
 
    //toggle error messages
 	$(".errorDiv").toggle();
@@ -59,9 +87,8 @@ $(function() {
             const formElements = Array.from(form);
             formElements.map(input => (data[input.name] = input.value));
 
-            
-            console.log("form data: ", data)
-            console.log("json string for data: ", JSON.stringify(data))
+            // console.log("form data: ", data)
+            // console.log("json string for data: ", JSON.stringify(data))
 
             // Construct an HTTP request
             var xhr = new XMLHttpRequest();

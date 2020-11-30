@@ -260,7 +260,7 @@
                                 to succeed.
                                 <span class="d-none d-sm-inline"><br /></span>I am here to help you achieve that.</p>
 
-                            
+
                         </div>
                         <!-- <span class="hidden-sm"><br /></span>
                         <div class="col-lg-4 col-md-5 col-sm-6">
@@ -296,8 +296,7 @@
                             <div id="aboutSection" class="mainBodyContent">
                                 <div class="row">
                                     <div class="col-lg-9 offset-lg-2 col-md-10 offset-md-1 col-sm-12">
-                                        <a onclick="switchPage.call(this, event);" 
-                                            href="#contactSection" 
+                                        <a onclick="switchPage.call(this, event);" href="#contactSection"
                                             class="internal-link center-text btn btn-primary btn-lg"
                                             style="margin-left: 18px;">
                                             <i class="fas fa-1x fa-comments"></i>
@@ -324,7 +323,7 @@
                                                         </em>
                                                         Getting your ideas out to the right people isn't as easy as just
                                                         having good ideas.
-                                                        <br/>
+                                                        <br />
                                                         That's where I come in!
                                                         Why should you worry about anything other than the big picture?
 
@@ -1261,7 +1260,7 @@
 
             <div class="row" style="padding:65px 0px 35px 0px">
                 <div class="col-sm-10 offset-sm-1 killPadding">
-                    
+
                     <div class="row">
                         <div class="col-md-6" style="padding-top:20px;">
                             <img alt="Coreyborg feeling successful" class="img-fluid mx-auto"
@@ -1277,9 +1276,11 @@
 
 
                                 <p class="">
-                                    <em>Successful websites can span months and cost thousands of dollars to create!</em>
-                                    For that reason, many people decide to try to tackle the task on their own. 
-                                    However, without the proper tools and knowledge of web technologies, your site is not likely to accomplish your goals.
+                                    <em>Successful websites can span months and cost thousands of dollars to
+                                        create!</em>
+                                    For that reason, many people decide to try to tackle the task on their own.
+                                    However, without the proper tools and knowledge of web technologies, your site is
+                                    not likely to accomplish your goals.
                                 </p>
 
                                 <br />
@@ -1362,9 +1363,9 @@
                                 action="https://i75s40dj83.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer">
                                 <div class="form-group row">
                                     <h3><label for="name" class="control-label required">Name</label></h3>
-                                    
+
                                     <div class="col-12">
-                                        
+
                                         <input type="text" class="form-control" id="name" name="name"
                                             placeholder="Your First & Last Name" value="" required>
 
@@ -1377,9 +1378,9 @@
                                 </div>
                                 <div class="form-group row">
                                     <h3><label for="email" class="control-label required">Email</label></h3>
-                                        
+
                                     <div class="col-12">
-                                       <input type="email" class="form-control" id="email" name="email"
+                                        <input type="email" class="form-control" id="email" name="email"
                                             placeholder="example@domain.com" value="" required>
 
 
@@ -1393,37 +1394,57 @@
 
                                 <div class="form-group row">
                                     <h3>Desired Services</h3>
-                                    <div class="col-12">
-                                        
+                                    <div class="col-12" style="padding-top:15px;">
 
-                                        <div class="form-check">
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" name="seviceRequestRadios"
+                                                id="seviceRequestRadios3" value="nudge nudge" checked>
+                                            <label class="form-check-label" for="seviceRequestRadios3">
+                                                A nudge in the right direction
+                                            </label>
+                                        </div>
+                                        <!-- <div class="form-check">
                                             <input class="form-check-input" type="radio" name="seviceRequestRadios"
                                                 id="seviceRequestRadios1" value="free consult">
                                             <label class="form-check-label" for="seviceRequestRadios1">
                                                 A free 20 minute consultation
                                             </label>
-                                        </div>
+                                        </div> -->
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="seviceRequestRadios"
-                                                id="seviceRequestRadios2" value="full site">
+                                            <input class="form-check-input toggle-site-plan" type="radio"
+                                                name="seviceRequestRadios" id="seviceRequestRadios2" value="paid site">
                                             <label class="form-check-label" for="seviceRequestRadios2">
-                                                A Full site built
+                                                Complete Website Package
                                             </label>
+
+                                            <div class="site-plan">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input brochure-plan-toggle" type="checkbox" id="inlineCheckbox1"
+                                                        name="Plan - Brochure" value="false">
+                                                    <label class="form-check-label" for="inlineCheckbox1">Brochure
+                                                        Plan</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input extended-plan-toggle" type="checkbox" id="inlineCheckbox2"
+                                                        name="Plan - Extended" value="false">
+                                                    <label class="form-check-label" for="inlineCheckbox2">Extended
+                                                        Plan</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input custom-plan-toggle" type="checkbox" id="inlineCheckbox3"
+                                                        name="Plan - Custom" value="false">
+                                                    <label class="form-check-label" for="inlineCheckbox3">Custom
+                                                        Plan</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4"
+                                                        name="Plan - Other" value="false">
+                                                    <label class="form-check-label" for="inlineCheckbox4">Other</label>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="seviceRequestRadios"
-                                                id="seviceRequestRadios3" value="update site" >
-                                            <label class="form-check-label" for="seviceRequestRadios3">
-                                                Updates to an existing site
-                                            </label>
-                                        </div>
-                                        <div class="form-check ">
-                                            <input class="form-check-input" type="radio" name="seviceRequestRadios"
-                                                id="seviceRequestRadios4" value="nudge nudge" checked>
-                                            <label class="form-check-label" for="seviceRequestRadios4">
-                                                A nudge in the right direction every now and then
-                                            </label>
-                                        </div>
+
+
 
                                     </div>
                                 </div>
@@ -1646,9 +1667,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 
 
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
     </script>
@@ -1659,41 +1677,38 @@
     <script src="scripts/main.js"></script>
     <script src="scripts/app.js"></script>
     <script type="text/javascript">
-    
-    var controller = new ScrollMagic.Controller();
-    
-   
-	
-	//detect idle time
-	var idleTime = 0;
-    $(document).ready(function () {
+        var controller = new ScrollMagic.Controller();
 
-        if(controller) {
-            $('body').addClass('scroll-magic-init');
-        }
 
-        //Increment the idle time counter every minute.
-        var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
 
-        //Zero the idle timer on mouse movement.
-        $(this).mousemove(function (e) {
-            idleTime = 0;
+        //detect idle time
+        var idleTime = 0;
+        $(document).ready(function () {
+
+            if (controller) {
+                $('body').addClass('scroll-magic-init');
+            }
+
+            //Increment the idle time counter every minute.
+            var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+
+            //Zero the idle timer on mouse movement.
+            $(this).mousemove(function (e) {
+                idleTime = 0;
+            });
+            $(this).keypress(function (e) {
+                idleTime = 0;
+            });
+
         });
-        $(this).keypress(function (e) {
-            idleTime = 0;
-        });
 
-    });
-
-    function timerIncrement() {
-        idleTime = idleTime + 1;
-        if (idleTime > 1) { // 2 minutes
-            //user is idle
+        function timerIncrement() {
+            idleTime = idleTime + 1;
+            if (idleTime > 1) { // 2 minutes
+                //user is idle
+            }
         }
-    }
-        
-	
-            </script>
+    </script>
 
 
 
