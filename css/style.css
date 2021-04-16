@@ -172,6 +172,16 @@ pre {
 
 }
 
+.navbar-nav .dropdown-item {
+    display: flex;
+    padding: 0;
+}
+
+.navbar-nav .dropdown-item a {
+    padding: .25rem 1.5rem;
+    flex:1;
+}
+
 .navbar-nav .dropdown-item:active {
     background: none;
     color: #007bff;
@@ -842,6 +852,9 @@ section.pricing-section .cloud-background {
     }
 }
 
+.carousel {
+    margin: 20px 0 30px;
+}
 
 .carousel-outer-div {
     margin-top: 45px;
@@ -1460,6 +1473,12 @@ footer a:focus {
 }
 
 /* hierarchical tree ul */
+
+ul.tree {
+    margin: 0;
+    padding: 12px;
+    background-color: rgb(240, 240, 240);
+}
 
 ul.tree,
 ul.tree ul {

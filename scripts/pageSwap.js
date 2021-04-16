@@ -42,11 +42,9 @@ function changeToPage(pageName, scrollToPage) {
                     
                 }
 
-                console.log(pageName)
                 //don't consider ?query=var in #scrollTo
                 if (pageName.includes("?")) {
                     scrollToLocation = scrollToLocation.split("?")[0];
-
 
                     //update query string
                     if ('URLSearchParams' in window) {
@@ -61,6 +59,7 @@ function changeToPage(pageName, scrollToPage) {
                         window.history.pushState({path: newurl}, '', newurl);
                         
                         currentUrl = newurl;
+                        queryActions();
                     }
 
                 }
@@ -103,16 +102,18 @@ function goToQueryString() {
 
 function queryActions() {
     var searchParams = new URLSearchParams(window.location.search);
-    console.log('searchParams', searchParams)
+    
     if( searchParams.get("plan") ) {
+
+        console.log('plan earchParams', searchParams.get("plan"))
+
         var selectedPlanName = searchParams.get("plan");
-        if (window.location.href.includes("#")) {
-            console.log('trying: ', $('.toggle-site-plan'))
-            //select radio for any plan
-            $('.toggle-site-plan').click();
-            //select specific plan requested
-            $('.' + selectedPlanName + "-plan-toggle").click();
-        }
+        console.log('trying: ', $('.toggle-site-plan'))
+        //select radio for any plan
+        $('.toggle-site-plan').click();
+        //select specific plan requested
+        $('.' + selectedPlanName + "-plan-toggle").click();
+    
 
     }
 }
