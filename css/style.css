@@ -538,7 +538,7 @@ section.portfolio-section .dev-vs-design-div {
     opacity: 1;
 }
 
-.scroll-magic-init section.portfolio-section .project-tools-p {
+.scroll-magic-init section.portfolio-section .project-tools {
     opacity: 0;
     -webkit-transition: all 2s ease-in-out;
     -moz-transition: all 2s ease-in-out;
@@ -547,7 +547,7 @@ section.portfolio-section .dev-vs-design-div {
     transition: all 2s ease-in-out;
 }
 
-.scroll-magic-init section.portfolio-section .project-tools-p.visible {
+.scroll-magic-init section.portfolio-section .project-tools.visible {
     opacity: 1;
 }
 
@@ -1021,7 +1021,7 @@ section.pricing-section .cloud-background {
     margin-bottom: 15px;
 }
 
-.project-tag-span {
+.project-tag {
     background: #fff;
     color: rgb(70, 55, 43);
     border: 1px solid rgb(70, 55, 43);
@@ -1175,7 +1175,7 @@ footer a:focus {
 /*project pages style*/
 
 .project-tools-div,
-.project-tools-p {
+.project-tools {
     margin: 35px 0px 5px;
 }
 
@@ -1183,7 +1183,7 @@ footer a:focus {
     margin: 40px auto 10px;
 }
 
-.project-supporting-text-div {
+.project-supporting-text {
     padding: 10px;
     background: white;
 }
@@ -1220,19 +1220,19 @@ footer a:focus {
 
 }
 
-.project-supporting-text-div .projectsDiv-panel {
+.project-supporting-text .projectsDiv-panel {
     margin-top: 25px;
 }
 
-.project-supporting-text-div .projectsDiv-panel {
+.project-supporting-text .projectsDiv-panel {
     padding: 0px 10px;
 }
 
-.project-supporting-text-div .projectsDiv-panel .row {
+.project-supporting-text .projectsDiv-panel .row {
     padding-bottom: 35px;
 }
 
-.project-supporting-text-div .projectsDiv-panel:last-child {
+.project-supporting-text .projectsDiv-panel:last-child {
     padding-bottom: 0;
 }
 
@@ -1241,9 +1241,13 @@ footer a:focus {
     margin-top: 20px;
 }
 
+p.projectDescription {
+    margin-top: 25px;
+}
+
 @media (max-width: 768px) {
 
-    .projectDescriptionParagraph {
+    p.projectDescription {
         margin: 15px;
     }
 
