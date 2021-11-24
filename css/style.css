@@ -199,8 +199,7 @@ pre {
 
 #brand-div img {
     padding: 5px;
-    padding-top: 25px;
-    padding-right: 20px;
+    padding-bottom: 25px;
 
     height: 110px;
     width: auto;
@@ -239,7 +238,7 @@ pre {
 
 .navbar.shrink #brand-div img {
     height: 55px;
-    padding-top: 5px;
+    padding-bottom: 5px;
     padding-right: 5px;
 
 }
@@ -251,7 +250,7 @@ pre {
     }
 
     .navbar #brand-div img {
-        padding-top: 5px;
+        padding-bottom: 5px;
         max-height: 65px;
 
     }
@@ -703,9 +702,9 @@ section.pricing-section .cloud-background {
 
 .offer {
     background: #fff;
-    border: 3px solid #ddd;
+    border: 1px solid #ddd;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    margin: 15px 0;
+    margin: 25px 0;
     overflow: hidden;
 
     border-radius: 7px;
@@ -1287,7 +1286,7 @@ p.projectDescription {
     -moz-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
 
-    max-height: 321px;
+    height: 265px;
     overflow: hidden;
 
     cursor: pointer;
