@@ -187,25 +187,25 @@
 //retrieve user document, set User information into project
 try {
     await db
-        .collection("users")
+        .collection("User")
         .doc(newProjectObj.UserId)
         .get()
         .then((userSnapshot) => {
             const userData: any = userSnapshot.data();
 
             const newProjectFields = {
-                created: date,
-                userHandle: userData.Handle,
-                userImage: userData.ImageUrl,
-                userBackground: userData.BackgroundUrl,
-                userName: userData.Name,
-                userVerified: false,
+                DateCreated: date,
+                Handle: userData.Handle,
+                ProfileImage: userData.ImageUrl,
+                BackgroundImage: userData.BackgroundUrl,
+                Name: userData.Name,
+                Verified: false,
             };
 
             return projectSnapshot.ref.update(newProjectFields);               
         });
 } catch (e) {
-    console.log("failed updating user data in project doc: ", e);
+    console.log("failed updating user doc: ", e);
     return false;
 }
 
@@ -229,24 +229,24 @@ try {
 
                     <pre><code class="language-typescript">it("can update user document with whitelisted fields", async () => {
     const admin = getAdminFirestore();
-    const setUpDoc = admin.collection('users').doc(myId);
+    const setUpDoc = admin.collection('User').doc(myId);
     const timestamp = new Date().getTime();
     await setUpDoc.set({
-        name: "",
-        handle: myHandle,
-        imageUrl: "",
-        backgroundUrl: "",
-        bio: "",
-        created: timestamp 
+        Name: "",
+        Handle: myHandle,
+        ProfileImage: "",
+        BackgroundImage: "",
+        ProfileBio: "",
+        DateCreated: timestamp 
  });
 
     const db = getFirestore(myAuth);
-    const myUserDocument = db.collection('users').doc(myId);
+    const myUserDocument = db.collection('User').doc(myId);
     const legitimateRequest = {
-        name: "The Grinch",
-        imageUrl: "image.com/image.jpg",
-        bio: "Just ya know doing that whatever",
-        backgroundUrl: "background.com/image.png"
+        Name: "The Grinch",
+        ProfileImage: "image.com/image.jpg",
+        ProfileBio: "Just ya know doing that whatever",
+        BackgroundImage: "background.com/image.png"
     }
 
     await firebase.assertSucceeds(
