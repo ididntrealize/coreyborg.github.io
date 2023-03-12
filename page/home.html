@@ -54,59 +54,55 @@
             </div>
         </div>
     </div>
-
     <section class="services-section">
-
         <div class="container ">
             <div class="row">
-                <div class="col-12 col-md-10 offset-md-1">
+                <div class="col-12 col-lg-10 offset-lg-1">
                     <!-- <h2 class="title d-block">
                         What I do
                     </h2> -->
 
                     <div class="services-flex">
-                        <div class="service">
+                        <div class="service active">
                             <i class="fas fa-laptop-code fa-3x"></i>
                             <h3>Wordpress Development</h3>
-                            <p class="d-none d-sm-block">I can set up CMS functionality to make your site easier and cheaper to maintain.
+                            <p class="d-sm-block">I can set up CMS functionality to make your site easier and cheaper to maintain.
                             </p>
                         </div>
                         <div class="service">
                             <i class="fas fa-users fa-3x"></i>
                             <h3>User Interfaces / Experience</h3>
-                            <p class="d-none d-sm-block">I can set up complex user interactions, analytics, and drive future updates.
+                            <p class="d-sm-block">I can set up complex user interactions, analytics, and drive future updates.
                             </p>
                         </div>
                         <div class="service">
                             <i class="fas fa-project-diagram fa-3x"></i>
                             <h3>Custom <br/>Interactivity</h3>
-                            <p class="d-none d-sm-block">I can build animations, visualizations, and special behavior for your page.
+                            <p class="d-sm-block">I can build animations, visualizations, and special behavior for your page.
                             </p>
                         </div>
                         <div class="service">
                             <i class="fas fa-cloud fa-3x"></i>
                             <h3>Cloud Infrastructure</h3>
-                            <p class="d-none d-sm-block">I can utilize cloud services to help ensure versatility, reliability and scalability.
+                            <p class="d-sm-block">I can utilize cloud services to help ensure versatility, reliability and scalability.
                             </p>
                         </div>
                         <div class="service">
                             <i class="fas fa-columns fa-3x"></i>
-                            <h3>layout design</h3>
-                            <p class="d-none d-sm-block">I can organize your content in a visually appealing way to help achieve your goals.
+                            <h3>layout Design</h3>
+                            <p class="d-sm-block">I can organize your content in a visually appealing way to help achieve your goals.
                             </p>
                         </div>
                         <div class="service">
                             <i class="fas fa-pen-fancy fa-3x"></i>
                             <h3>Graphic Design</h3>
-                            <p class="d-none d-sm-block">I can create logos, icons, banners, business cards, and more for your business.
+                            <p class="d-sm-block">I can create logos, icons, banners, business cards, and more for your business.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </section>
 
     <!-- CAROUSEL AND PORTFOLIO AREA-->
@@ -136,13 +132,15 @@
                         data-interval="6500" data-pause="hover" style="background: white;">
                         <div class="carousel-inner" role="listbox">
                             <div class="carousel-inner" role="listbox" style="padding-bottom: 30px;">
-
                                 <div class="carousel-item active">
                                     <div class="carousel-outer-div">
 
                                         <a title="Site by Coreyborg - B&amp;G Foods"
                                             onclick="switchPage.call(this, event);" href="bgfoods.html">
-                                            <h4>BGFoods.com - Corporate</h4>
+                                            <div class="title">
+                                            <h4>BGFoods.com</h4>
+                                            <span class="project-tag carousel-tag">&#8226;&nbsp;Corporate</span>
+                                            </div>
                                             <img alt="BGFoods.com responsive site preview - across device sizes"
                                                 class="mx-auto d-none d-sm-block"
                                                 src="images/responsiveFullPreview-bgfoods.jpg"
@@ -158,8 +156,11 @@
 
                                         <a title="Site by Coreyborg - Anko" onclick="switchPage.call(this, event);"
                                             href="anko.html">
-                                            <h4>Anko.com - Corporate</h4>
-                                            <img alt="Anko.com responsive site preview - across device sizes"
+                                            <div class="title">
+                                                <h4>Anko.com</h4>
+                                                <span class="project-tag carousel-tag">&#8226;&nbsp;Corporate</span>
+                                            </div>
+                                                <img alt="Anko.com responsive site preview - across device sizes"
                                                 class="mx-auto d-none d-sm-block"
                                                 src="images/responsiveFullPreview-anko.jpg" style="max-width:753px;" />
                                             <img alt="Anko.com responsive site preview - mobile size"
@@ -174,7 +175,10 @@
                                         <a onclick="switchPage.call(this, event);"
                                             title="Site by Coreyborg - Didn't Realize project description"
                                             href="ididntrealize.html">
-                                            <h4>ididntrealize.com - Personal</h4>
+                                            <div class="title">
+                                                <h4>ididntrealize.com</h4>
+                                                <span class="project-tag carousel-tag">&#8226;&nbsp;Personal</span>
+                                            </div>
                                             <img alt="didntrealize.com responsive site preview - across device sizes"
                                                 class="mx-auto d-none d-sm-block"
                                                 src="images/responsiveFullPreview-idr.jpg" />
@@ -191,7 +195,12 @@
                                         <a onclick="switchPage.call(this, event);"
                                             title="Site by Coreyborg - Food For Heart project description"
                                             href="foodforheart.html">
-                                            <h4>FoodForHeart.net - Independent</h4>
+                                            
+                                            <div class="title">
+                                                <h4>FoodForHeart.net</h4>
+                                                <span class="project-tag carousel-tag">&#8226;&nbsp;Independent</span>
+                                            </div>
+
                                             <img alt="metatorial.com responsive site preview - across device sizes"
                                                 class="mx-auto d-none d-sm-block"
                                                 src="images/responsiveFullPreview-ffh.jpg" style="max-width:753px;" />
@@ -207,7 +216,10 @@
 
                                         <a title="Site by Coreyborg - Escrave: Habit Tracking App About" target="_blank"
                                             href="https://escrave.com">
-                                            <h4>EsCrave.com - Personal</h4>
+                                            <div class="title">
+                                                <h4>EsCrave.com</h4>
+                                                <span class="project-tag carousel-tag">&#8226;&nbsp;Personal</span>
+                                            </div>
                                             <img alt="Escrave.com responsive site preview - across device sizes"
                                                 class="mx-auto d-none d-sm-block"
                                                 src="images/responsiveFullPreview-escrave.jpg"
@@ -219,14 +231,17 @@
                                     </div>
                                 </div>
 
-
                                 <div class="carousel-item">
                                     <div class="carousel-outer-div">
 
                                         <a onclick="switchPage.call(this, event);"
                                             title="Site by Coreyborg - Metatorial project description"
                                             href="metatorial.html">
-                                            <h4>Metatorial.com - Independent</h4>
+                                            <div class="title">
+                                                <h4>Metatorial.com</h4>
+                                                <span class="project-tag carousel-tag">&#8226;&nbsp;Independent</span>
+                                                
+                                            </div>
                                             <img alt="metatorial.com responsive site preview - across device sizes"
                                                 class="mx-auto d-none d-sm-block"
                                                 src="images/responsiveFullPreview-metatorial.jpg"
@@ -363,7 +378,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <p class="project-tools">
+                        <p class="project-tools d-none d-sm-block">
                             <span class="project-tag">&#8226;&nbsp;User&nbsp;Interfaces</span>
                             <span class="project-tag">&#8226;&nbsp;User&nbsp;Experience</span>
                             <span class="project-tag">&#8226;&nbsp;eCommerce</span>
@@ -581,7 +596,7 @@
                     </p>
                     <a onclick="switchPage.call(this, event);" href="pricing.html"
                         class="internal-link center-text btn btn-primary btn-lg">
-                        <i class="fas fa-1x fa-dollar-sign"></i>
+                        <i class="fas fa-1x fa-tasks"></i>
                         &nbsp;View Site Packages
                     </a>
                 </div>
@@ -623,7 +638,7 @@
                                     <a title="Site by Coreyborg - Laurelhurst Research: medical, documentary, & grant writing services"
                                         target="_blank" href="https://ididntrealize.com/the-willow-walkers">
                                         <img alt="The Willow Walkers site preview - mobile size"
-                                            class="float-left site-thumb" src="images/thumb-idr-bandcamp.png" />
+                                            class="float-left site-thumb" src="images/thumb-idr-willowwalkers.png" />
                                     </a>
 
 
@@ -800,6 +815,45 @@
                 .addTo(controller);
 
         }
+
+        // Mobile services behavior
+        if (window.screen.width < 768) {
+            $('section.services-section .service p').toggle()
+
+            $('section.services-section .service').on('touchstart', (evt) => {
+                $($($(evt.currentTarget)[0]).find('p')[0]).slideToggle()
+            })
+        }
+
+        
+        //services section
+        $('section.services-section .service').on('mouseenter', () => {
+            $('section.services-section .service').removeClass('active')
+            $('section.services-section .service:hover').addClass('active')
+        })
+        $('section.services-section').on('mouseleave', () => {
+            let activeHover = $('section.services-section .service:hover').length > 0;
+            if (activeHover) {
+                $('section.services-section .service').removeClass('active')
+            }
+        })
+
+        let servicesCarouselInterval = setInterval( ()=> {
+            let services = $('section.services-section .service')
+            let activeHover = $('section.services-section .service:hover').length > 0;
+            if (activeHover) return false
+
+            for (let i = 0; i <= services.length; i++) {
+                let nextIndex = (i + 1) % 6
+                // console.log(services[nextIndex])
+                if ($(services[i]).hasClass('active')) {
+                    $(services[i]).removeClass('active')
+                    $(services[nextIndex]).addClass('active')
+                    break;
+                }
+            }
+        },4700)
+
 
         //portfolio section
         new ScrollMagic.Scene({

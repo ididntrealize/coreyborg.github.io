@@ -561,11 +561,9 @@ section.services-section .service {
     text-align: center;
 }
 
-
-
 section.services-section h3 {
     font-weight: 400;
-    color: #35518e;
+    color: #567EBB;
 }
 
 section.services-section i {
@@ -580,29 +578,32 @@ section.services-section i {
 
     section.services-section .service:nth-child(1),
     section.services-section .service:nth-child(4) {
-        border-right: 1px solid #eae8e8;
+        border-right: 1px solid #d5d4d4;
     }
     section.services-section .service:nth-child(1),
     section.services-section .service:nth-child(2),
     section.services-section .service:nth-child(3) {
-        border-bottom: 1px solid #eae8e8;
+        border-bottom: 1px solid #d5d4d4;
     }
     section.services-section .service:nth-child(3),
     section.services-section .service:nth-child(6) {
-        border-left: 1px solid #eae8e8;
+        border-left: 1px solid #d5d4d4;
+    }
+    section.services-section h3 {
+        font-weight: 400;
+        color: #424e67;
     }
 
-    .service.active,
-    .service:hover {
+    .service.active {
         background-color: white;
     }
 
     .service:not(.active) p {
-        color:rgb(153, 151, 151)
+        color:rgb(206, 206, 206)
     }
-    .service:hover p { 
+    /* .service:hover p { 
         color:rgb(49, 49, 49)
-    }
+    } */
 }
 
 section.process-section {
@@ -912,6 +913,16 @@ section.pricing-section .cloud-background {
 .carousel-outer-div {
     margin-top: 45px;
     margin-bottom: 45px;
+}
+
+.carousel-outer-div a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-outer-div h4 {
+    display: inline-block;
 }
 
 
