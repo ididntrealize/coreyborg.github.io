@@ -565,11 +565,11 @@ section.services-section .service {
 
 section.services-section h3 {
     font-weight: 400;
-    color: #8bbef4;
+    color: #35518e;
 }
 
 section.services-section i {
-    color: #ded5d0;
+    color: #c3bdb9;
     padding: 7px;
 }
 
@@ -598,8 +598,7 @@ section.services-section i {
     }
 
     .service:not(.active) p {
-        transition: all .4s ease-in;
-        color:rgb(183, 181, 181)
+        color:rgb(153, 151, 151)
     }
     .service:hover p { 
         color:rgb(49, 49, 49)
