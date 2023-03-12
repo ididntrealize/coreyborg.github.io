@@ -114,10 +114,7 @@ pre {
     border-color: #90C2FF;
 }
 
-
 /* NAVBAR STYLES */
-
-
 .navbar a {
 
     font-size: 20px;
@@ -550,6 +547,64 @@ section.portfolio-section .dev-vs-design-div {
     opacity: 1;
 }
 
+section.services-section .services-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+section.services-section .service {
+    flex: 1 0 100%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;    
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+section.services-section h3 {
+    font-weight: 400;
+    color: #8bbef4;
+}
+
+section.services-section i {
+    color: #ded5d0;
+    padding: 7px;
+}
+
+@media (min-width:768px) {
+    section.services-section .service {
+        flex: 1 0 33.33%;
+    }
+
+    section.services-section .service:nth-child(1),
+    section.services-section .service:nth-child(4) {
+        border-right: 1px solid #eae8e8;
+    }
+    section.services-section .service:nth-child(1),
+    section.services-section .service:nth-child(2),
+    section.services-section .service:nth-child(3) {
+        border-bottom: 1px solid #eae8e8;
+    }
+    section.services-section .service:nth-child(3),
+    section.services-section .service:nth-child(6) {
+        border-left: 1px solid #eae8e8;
+    }
+
+    .service.active,
+    .service:hover {
+        background-color: white;
+    }
+
+    .service:not(.active) p {
+        transition: all .4s ease-in;
+        color:rgb(183, 181, 181)
+    }
+    .service:hover p { 
+        color:rgb(49, 49, 49)
+    }
+}
 
 section.process-section {
 
