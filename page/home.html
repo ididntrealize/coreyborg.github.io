@@ -89,7 +89,7 @@
                         </div>
                         <div class="service">
                             <i class="fas fa-columns fa-3x"></i>
-                            <h3>layout Design</h3>
+                            <h3>Layout Design</h3>
                             <p class="d-sm-block">I can organize your content in a visually appealing way to help achieve your goals.
                             </p>
                         </div>
@@ -805,7 +805,7 @@
         let recentPosInterval = setInterval( () => {
             recentX = cursorX
             recentY = cursorY
-        }, 500)
+        }, 800)
 
         // Mobile services behavior
         let touchStartY = 0
@@ -821,12 +821,11 @@
         }
 
         function activeMouse() {
-            return Math.abs(cursorX - recentX) > 5
-                || Math.abs(cursorY - recentY) > 5
+            return Math.abs(cursorX - recentX) > 0
+                || Math.abs(cursorY - recentY) > 0
         }
         
-        function servicesCarousel(){
-
+        function servicesCarousel() {
             let services = $('section.services-section .service')
             let activeHover = $('section.services-section .service:hover').length > 0
             if (activeHover && activeMouse()) {
@@ -843,7 +842,7 @@
             }
         }
 
-       let servicesCarouselInterval = setInterval(servicesCarousel , 6700) 
+        let servicesCarouselInterval = setInterval(servicesCarousel , 6700) 
 
         //services section
         $('section.services-section .service').on('mouseover', () => {
