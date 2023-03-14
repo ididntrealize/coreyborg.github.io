@@ -846,8 +846,12 @@
             if(activeMouse()) {
                 $('section.services-section .service').removeClass('active')
                 $('section.services-section .service:hover').addClass('active')
-                clearInterval(servicesCarouselInterval)
-                servicesCarouselInterval = setInterval(servicesCarousel, 6000)
+                console.log("resetting interval")
+                setTimeout( () => {
+                    clearInterval(servicesCarouselInterval)
+                    servicesCarouselInterval = setInterval(servicesCarousel, 6000)
+
+                }, 0)
             }
         })
         $('section.services-section').on('mouseleave', () => {
