@@ -106,7 +106,6 @@ $(function() {
                 form.reset();
                 $('#form-messages').addClass('success')
                 $('#form-messages').html('Thanks much, email sent!');
-                $('#form-messages').toggle();
             } else {
                 // The form submission failed
                 $('#form-messages').html('Something went wrong!');
