@@ -846,11 +846,12 @@
             if(activeMouse()) {
                 $('section.services-section .service').removeClass('active')
                 $('section.services-section .service:hover').addClass('active')
-                console.log("resetting interval")
-                setTimeout( () => {
-                    clearInterval(servicesCarouselInterval)
-                    servicesCarouselInterval = setInterval(servicesCarousel, 6000)
+                
+                clearInterval(servicesCarouselInterval)
+                servicesCarouselInterval = undefined
 
+                setTimeout( () => {
+                    servicesCarouselInterval = setInterval(servicesCarousel, 6000)
                 }, 0)
             }
         })
