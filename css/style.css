@@ -17,16 +17,17 @@ article {
 section {
     overflow: hidden;
 }
+h1, h2, h3, h4 {
+    font-family: 'Asul', sans-serif;
+}
 
 h1 {
-    font-family: 'Asul', sans-serif;
     margin-top: 5px;
     font-size: 50px;
     text-align: center;
 }
 
 h2 {
-    font-family: 'Asul', sans-serif;
     padding: 45px 0px 35px 0px;
     margin-top: 0px;
     font-size: 55px;
@@ -948,7 +949,6 @@ section.pricing-section .cloud-background {
     padding-left: 10px;
     padding-right: 10px;
     color: #34508e;
-    font-family: 'Noto Sans', sans-serif;
 }
 
 #offer-text-supporting {
