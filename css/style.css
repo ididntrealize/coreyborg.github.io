@@ -284,7 +284,7 @@ pre {
 
 @media (max-width:978px) {
     h1 {
-        font-size: 42px;
+        font-size: 34px;
 
     }
 }
@@ -600,7 +600,7 @@ section.services-section i {
     }
 
     .service:not(.active) p {
-        color:rgb(206, 206, 206)
+        color:rgb(149, 148, 148)
     }
     /* .service:hover p { 
         color:rgb(49, 49, 49)
@@ -989,12 +989,18 @@ section.pricing-section .cloud-background {
     color: green;
 }
 
+
 #main-text-offer-div {
     margin-top: 130px;
     background: rgb(255, 255, 255);
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 39%, rgba(255, 255, 255, 0) 100%);
     padding: 0px;
 
+}
+
+#main-text-offer-div .shift-up {
+    position: relative;
+    top: -90px;
 }
 
 @media (max-width:750px) {
@@ -1118,6 +1124,15 @@ section.pricing-section .cloud-background {
     margin-left: 0;
 
 }
+.intro-image-container {
+    background-image: url("../images/corey-couch-cloud-laughing.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 400px;
+    padding-top: 150px;
+    position: relative;
+    top: 0px;
+}
 
 .row .d-flex.image-container {
     justify-content: flex-end;
@@ -1126,6 +1141,11 @@ section.pricing-section .cloud-background {
 @media (min-width: 768px) {
     .row .d-flex.image-container {
         justify-content: center;
+    }
+
+    .intro-image-container {
+        top: -80px;
+        min-height: 500px;
     }
 }
 

@@ -3,7 +3,7 @@
 
         <div class="container killPadding">
             <div id="aboutSection" class="mainBodyContent">
-                <div class="row">
+                <div class="row position-relative" style="z-index:100;">
                     <div class="col-lg-9 offset-lg-2 col-md-10 offset-md-1 col-sm-12">
                         <a onclick="switchPage.call(this, event);" href="home.html#contactSection"
                             class="internal-link center-text btn btn-primary btn-lg" style="margin-left: 18px;">
@@ -14,28 +14,21 @@
                 </div>
 
                 <!-- ABOUT ME STAND IN-->
-                <div class="row" style="margin-top:0px;">
+                <div class="row shift-up" style="margin-top:0px;">
                     <div class="col-sm-10 offset-sm-1">
-                        <div class="row">
-                            <div class="col-lg-5 col-md-4 col-1 order-2 order-md-1">
-                                <div class="d-flex mx-auto image-container hidden-xs">
-                                    <img alt="Coreyborg coding on a couch with custom cloud laptop artwork"
-                                        class="d-block mx-auto" src="images/corey-couch-cloud-laughing.jpg"
-                                        style="border-radius:10px;" />
-
-                                </div>
-                            </div>
-                            <div class="col-lg-7 col-md-8 col-11 order-1 order-md-2 d-flex align-items-end d-block-xs"
+                        <div class="row intro-image-container">
+                            
+                            <div class="col-lg-6 col-md-7 col-10 order-1 order-md-2 offset-lg-1 d-flex align-items-start d-block-xs"
                                 style="z-index: 10;margin-top:15px;">
 
-                                <div class="visible-xs-only">
+                                <!-- <div class="visible-xs-only">
                                     <img class="img-fluid" src="images/about-me-photo.jpg" />
-                                </div>
+                                </div> -->
 
                                 <div class="text-panel about-panel">
 
                                     <h3>Corey Boiko</h3>
-                                    <p><em>Designer &amp; Developer</em></p>
+                                    <!-- <p><em>Designer &amp; Developer</em></p> -->
                                     <p>
                                         <!-- class="d-none d-sm-inline" -->
                                         Getting your ideas to the right people isn't as easy as just
@@ -58,9 +51,9 @@
         <div class="container ">
             <div class="row">
                 <div class="col-12 col-lg-10 offset-lg-1">
-                    <!-- <h2 class="title d-block">
-                        What I do
-                    </h2> -->
+                    <h2 class="title d-block text-center pt-0">
+                        Areas of Expertise
+                    </h2>
 
                     <div class="services-flex">
                         <div class="service active">
