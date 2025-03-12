@@ -1156,7 +1156,8 @@ section.pricing-section .cloud-background {
 
 }
 .intro-image-container {
-    background-image: url("../images/corey-couch-cloud-laughing.jpg");
+    /* background-image: url("../images/corey-couch-cloud-laughing.jpg"); */
+    background-image: url("../images/little-corey-5-pointz.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     min-height: 400px;
@@ -1175,7 +1176,6 @@ section.pricing-section .cloud-background {
     }
 
     .intro-image-container {
-        top: -80px;
         min-height: 500px;
     }
 }
