@@ -46,3 +46,27 @@
 		}
 	
 	})();
+
+	const timestamp = Date.now();
+	const now = new Date(timestamp);
+	
+	const hours = now.getHours().toString().padStart(2, '0');
+	const minutes = now.getMinutes().toString().padStart(2, '0');
+	const seconds = now.getSeconds().toString().padStart(2, '0');
+
+
+	if (hours < 7 || hours >= 22) {
+		// night time
+		$('body').addClass("night")
+		$('body').removeClass("sunset")
+	} else if (hours >= 9 || hours >= 22) {
+		//day time
+		$('body').removeClass("night")
+		$('body').removeClass("sunset")
+
+	} else {
+		// Sunset
+		$('body').removeClass("night")
+		$('body').addClass("sunset")
+
+	}
