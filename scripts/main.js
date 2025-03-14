@@ -55,11 +55,12 @@
 	const seconds = now.getSeconds().toString().padStart(2, '0');
 
 
-	if (hours < 7 || hours >= 22) {
+	if (hours < 7 || hours >= 21) {
 		// night time
 		$('body').addClass("night")
 		$('body').removeClass("sunset")
-	} else if (hours >= 9 || hours >= 22) {
+
+	} else if (hours >= 9 && hours < 19) {
 		//day time
 		$('body').removeClass("night")
 		$('body').removeClass("sunset")
