@@ -43,6 +43,12 @@ $(function() {
 		var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 		return regex.test(email);
 	}
+
+    function botBot(text) {
+        const words = text.split(/\s+/);
+        const regex = /^(?![A-Z]+$)(?=.*[A-Z].*[A-Z])(?=.*[a-z])[A-Za-z0-9]+$/;
+        return words.some(word => regex.test(word));
+    }
    
    $(form).submit(function(event) {
 		// Stop the browser from submitting the form.
@@ -79,6 +85,13 @@ $(function() {
 			$("#messageErrorDiv").hide();
 			erroredMessage=false;
 		}
+
+        if (botBot(message) || botBot(name)) {
+            form.reset();
+            $('#form-messages').addClass('success')
+            $('#form-messages').html('Thanks much, email sent!');
+            return
+        }
 		
 		if(!erroredEmail && !erroredName && !erroredMessage){
             const form = document.querySelector('form');
