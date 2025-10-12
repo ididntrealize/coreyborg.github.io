@@ -27,7 +27,6 @@ $(function() {
         }
     });
 
-
     /* SUBMITTING THE FORM */
 
    //toggle error messages
@@ -53,6 +52,7 @@ $(function() {
    $(form).submit(function(event) {
 		// Stop the browser from submitting the form.
 		event.preventDefault();
+        const form = document.querySelector('form');
 
 		var name = $("#name").val(),
 			email= $("#email").val(),
@@ -67,7 +67,6 @@ $(function() {
 			erroredName=false;
 		}
 		
-		
 		var validEmail = isEmail(email);
 		if (!validEmail){
 			$("#emailErrorDiv").show();
@@ -76,7 +75,6 @@ $(function() {
 			$("#emailErrorDiv").hide();
 			erroredEmail=false;
 		}
-		
 		
 		if(message==""){
 			$("#messageErrorDiv").show();
@@ -94,14 +92,10 @@ $(function() {
         }
 		
 		if(!erroredEmail && !erroredName && !erroredMessage){
-            const form = document.querySelector('form');
 
             const data = {};
             const formElements = Array.from(form);
             formElements.map(input => (data[input.name] = input.value));
-
-            // console.log("form data: ", data)
-            // console.log("json string for data: ", JSON.stringify(data))
 
             // Construct an HTTP request
             var xhr = new XMLHttpRequest();
