@@ -364,8 +364,17 @@ pre {
 #thankYouAdBlockersDiv {
     position: fixed;
     top: 130px;
-    right: 0px;
+    right: 15px;
     z-index: 10000;
+}
+
+@media (max-width: 768px) {
+    #thankYouAdBlockersDiv {
+        right: 0px;
+    }
+    #thankYouAdBlockersDiv .thankYouAdBlocker {
+        margin: 10px 5px;
+    }
 }
 
 /* footer socials */
@@ -957,11 +966,10 @@ section.pricing-section .cloud-background {
 
 #offerDiv {
     background-image: url("../images/main-offer-background11.jpg");
-    background-position: center top;
+    background-position: center;
     background-repeat: no-repeat;
     background-color: white;
     background-size: cover;
-    margin-top: 80px;
     padding-bottom: 0px;
 }
 /* day night sunset */
@@ -971,7 +979,7 @@ section.pricing-section .cloud-background {
 }
 .sunset #offerDiv {
     background-image: url("../images/main-offer-background.jpg");
-    margin-top: 0px;
+    margin-top: 130px;
 }
 
 
@@ -999,8 +1007,14 @@ section.pricing-section .cloud-background {
 
 @media (max-width:750px) {
     #offerDiv {
-        background-position-y: -70px;
+        background-position-y: -260px;
         background-size: auto;
+    }
+
+    .sunset #offerDiv,
+    .night #offerDiv {
+        background-position-y: -70px;
+        margin-top: 0px;
     }
 
     #offerDiv p {
@@ -1021,9 +1035,9 @@ section.pricing-section .cloud-background {
 
 
 #main-text-offer-div {
-    margin-top: 190px;
+    margin-top: 200px;
     background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 59%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
     padding: 0px;
     padding-top: 65px;
 
